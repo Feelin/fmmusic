@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta name="KEYWords" content="暨大星球杯歌唱比赛"/>
+	<meta name='description' content='暨南大学的线上歌唱大赛'/>
+	<meta name="author" content="JnuFM studio"/> 
+	<meta name="viewport"  content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+	<meta name="Robots" contect="all">
+	<meta name="revisit-after" content="1 days"> 
+	<title>星球杯歌唱大赛</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/default.css" />
+    <link rel="shortcut icon" href="img/icon.jpg" type="image/x-icon" sizes="16x16"/>
+</head>
+<body>
+	
+	<div class="container">
+		
+		<div class="topbar">
+			<img class="logo" src="__PUBLIC__/img/logo.png"/>
+			<img class="logoChild" src="__PUBLIC__/img/logoChild.png"/>
+			<a target="_blank" href="http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5NDcxODk0MA==&appmsgid=10000341&itemidx=1&sign=c7fcc57ee82baf26911b63d54ecd9895#wechat_redirect">
+				<div class="join">
+					<div class="joinBG"></div>报名方式
+				</div>
+			</a>
+		</div>
+
+		<div class="content">
+		
+			<div class="search">
+				<img src="__PUBLIC__/img/searchIcon.png" id="searchIcon">
+				<input type="text" name="keyword" id="searchText" value="输入选手编号,姓名,歌曲信息" />
+				<a href="javascript:;" id="searchBtn" >
+					<div class="searchBtn">搜索一下</div>
+				</a>
+				<a href="http://fmmusic.sinaapp.com/Index/random/?id=1">
+					<div class="randomBtn">随便听听</div>
+				</a>		
+			</div>
+		
+			<div class="top">
+				
+				<div class="hot">
+					<div class="hotBG"></div>
+					<div class="titleBar" id="hotSong"><img src="__PUBLIC__/img/likeIcon2.png">
+					热歌榜</div>
+					<foreach name="hot" item="vo">
+                        <a href="http://fmmusic.sinaapp.com/index.php/Index/index/id/{$vo.id}.html">
+							<div class="songInfo">
+	                            <label class="num">{$vo.no}</label>
+	                            <label class="singerName">{$vo.name}</label>
+	                            <label class="songName">{$vo.song_name}</label>
+							</div>
+						</a>
+                     </foreach>					
+				</div>
+				
+				<div class="new">
+				<div class="newBG"></div>
+					<div class="titleBar" id="newSong"><img src="__PUBLIC__/img/newsongIcon.png">
+					新歌榜</div>
+
+					<foreach name="new" item="vo">
+                        <a href="http://fmmusic.sinaapp.com/index.php/Index/index/id/{$vo.id}.html">
+							<div class="songInfo">
+                            	<label class="num">{$vo.no}</label>
+                            	<label class="singerName">{$vo.name}</label>
+                            	<label class="songName">{$vo.song_name}</label>
+							</div>
+						</a>
+                     </foreach>
+				</div>
+			</div>
+		</div>
+		<div class="footer"> Copyright © 2013 All Right Reserved JnuFM Studio</div>
+		<div class="popBoard">	
+			<div class="popBoardBG"></div>	
+			<div class="S_result">
+				<div class="S_resultBG"></div>
+				<div class="S_title">
+					搜索结果(共<label id="searchLength">0</label>个)
+					<div id="closeBtn">X</div>
+				</div>
+				<div class="formhead">
+					<div class="S_num_H">编号</div>
+					<div class="S_singerName_H">姓名</div>
+					<div class="S_songName_H">演唱歌曲</div>
+				</div>
+				<div id="searchList">
+					
+				</div>
+				<div class="nofind">搜索不到你要找的内容</div>
+			</div>
+		
+	</div>
+	<script type="text/javascript"  src="__PUBLIC__/js/jquery1.4.2.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var div = '<div class="songInfoBG"></div>';
+			$(".songInfo").hover(function(){
+					$(this).prepend(div);
+				},
+				function(){
+					$(".songInfoBG").remove();
+				}
+			);
+			$("#searchText").focus(function(){
+				if($(this).attr("value")=="输入选手编号,姓名,歌曲信息"){
+					$(this).attr("value","");
+				}
+			});
+
+			
+			$("#closeBtn").click(function(){
+				$(".popBoard").css("display","none");
+				$("#searchList").empty();
+				$(".nofind").css("display","none");
+			});
+
+			$("#searchBtn").click(function(){
+				var searchText = $("#searchText").attr("value").toString();
+				$.getJSON("http://fmmusic.sinaapp.com/Index/search/",{
+					"keyword":searchText
+				},function(data){
+					if(data.status==0){
+					var searchHtml = '';
+					var info = data.data.data;
+					for( i in info){
+						searchHtml = searchHtml+'<a href="http://fmmusic.sinaapp.com/index.php/Index/index/id/'+info[i]['id']+'" class="S_info"><div class="S_songInfo"><label class="S_num">'+info[i]['no']+'</label><label class="S_singerName">'+info[i]['name']+'</label><label class="S_songName">'+info[i]['song_name']+'</label></div></a>';
+					}
+					$("#searchLength").text(data.data.count);
+					$("#searchList").prepend(searchHtml);
+					$(".popBoard").css("display","block");
+					$(".S_songInfo").hover(function(){
+							$(this).prepend('<div class="hoveringBar"></div><div class="S_songInfoBG"></div>');
+						},
+						function(){
+							$(".hoveringBar").remove();
+							$(".S_songInfoBG").remove();
+						});
+					}
+					else{
+						$(".nofind").css("display","block");
+						$(".popBoard").css("display","block");
+					}
+					});
+				});
+		});
+
+	$(document).keydown(function(event){ 
+        if(event.keyCode==13){
+        	$(".searchBtn").trigger("click");
+       	} 
+    });
+		
+	</script>
+</body>
+</html>

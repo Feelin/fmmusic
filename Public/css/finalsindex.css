@@ -1,0 +1,671 @@
+.dumascroll {
+}		
+.dumascroll_area {
+	height:100%;
+	overflow:hidden;
+
+}
+.dumascroll_bar,.dumascroll_handle,.dumascroll_handle_a,.dumascroll_arrow_up,.dumascroll_arrow_up_a,.dumascroll_arrow_down,.dumascroll_arrow_down_a {
+	background-image:url("../img/finals/scroll_handle.png");
+}
+.dumascroll_bar {
+	position:absolute;
+	top:0;
+	right:0;
+	z-index:9;
+	width:14px;
+	height:100%;
+	cursor:default;
+	-moz-user-select:none;
+	-khtml-user-select:none;
+	user-select:none;
+	background-repeat:repeat-y;
+	background-position:0px 0;
+	float:left;
+	visibility: hidden;
+	
+}
+.dumascroll_arrow_up,.dumascroll_arrow_up_a,.dumascroll_handle,.dumascroll_handle_a,.dumascroll_arrow_down,.dumascroll_arrow_down_a {
+	position:absolute;
+	left:0;
+}
+.dumascroll_arrow_up,.dumascroll_arrow_up_a,.dumascroll_arrow_down,.dumascroll_arrow_down_a {
+	width:100%;
+	height:14px;
+	color:#fff;
+	text-align:center;
+} 
+.dumascroll_arrow_down { background-position:-50px 0; height: 0;}
+.dumascroll_arrow_down_a { background-position:-50px 0; height: 0;}
+.dumascroll_arrow_up { background-position:-50px 0; height: 0;}
+.dumascroll_arrow_up_a { background-position:-50px 0; height: 0;}
+.dumascroll_arrow_up,.dumascroll_arrow_up_a { top:0; height: 0;}
+.dumascroll_arrow_down,.dumascroll_arrow_down_a { bottom:0; height: 0;}
+
+.dumascroll_handle,.dumascroll_handle_a { width:100%; background-repeat:repeat-y; }
+.dumascroll_handle { background-position:-14px 0; }
+.dumascroll_handle_a { background-position:-28px 0; }
+body{
+	background: url(../img/finals/BGindex.jpg) no-repeat;
+	background-size:  100%;
+	margin: 0px;	
+	position: absolute;	
+	z-index: -999;
+	font-family: "微软雅黑";	
+	display: block;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	min-height: 550px;
+	font-weight: bold;
+}
+img{
+	border:none;
+}
+a{
+	text-decoration: none;
+	outline: none;
+}
+
+.container{
+	margin-top: -275px;
+	margin-left: -500px;
+	width: 840px;
+	height: 550px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: -100;
+	box-shadow: 0px 0px 68px #000,0px 0px 48px #000,0px 0px 20px #000;
+	position: relative;
+}
+
+.songBoard{
+	width: 360px;
+	height: 550px;	
+	background: #fff;
+	position: relative;
+	float: left;
+}
+.return{
+	position: absolute;
+	top: 15px;
+	left: 10px;
+}
+.return img{
+	width: 20px;
+}
+.share{
+	position: absolute;
+	right: 10px;
+	top: 15px;	
+	color: #919191;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.CD{
+	position: absolute;
+	top: 25px;
+	left: 55px;
+	z-index: 99;
+	width: 250px;
+	height: 250px;
+}
+.CDlogo{
+	width: 250px;
+	height: 250px;
+	background: url(../img/finals/CDlogo.png);
+	position: absolute;
+	top: 25px;
+	left: 55px;
+	z-index: 100;
+	opacity: 0;
+}
+
+#cd{
+	position: absolute;
+	width:250px;
+	height: 250px;
+}
+.next{
+	width: 50px;
+	height: 25px;
+	border-radius: 5px 0  0 5px;
+	background: #efefef;
+	color: #c9c9c9;
+	float: right;
+	margin-top: 280px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: normal;
+}
+.last{
+	width: 50px;
+	height: 25px;
+	border-radius: 0 5px 5px 0;
+	background: #efefef;
+	color: #c9c9c9;
+	float: left;
+	margin-top: 280px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: normal;
+}
+.last:hover,.next:hover{
+	color: 969696;
+	background:#e6e6e6;
+}
+.CDtitle{
+	width: 210px;
+	height: 35px;
+	border-radius:5px;
+	border: 1px #478e47 solid;
+	background: #52a652;
+	position: absolute;
+	top: 300px;
+	left: 80px;
+	text-align: left;
+}
+.vote{
+	width: 120px;
+	height: 35px;
+	background: #e68080;
+	border-radius: 5px;
+	position: absolute;
+	top: 190px;
+	left: 150px;
+	color: #fff;
+	line-height: 35px;
+	box-shadow: 0px 1px 1px #000;
+	z-index: 99999;
+}
+.vote img{
+	width: 15px;
+	float: left;
+	margin-top: 11px;
+	margin-left: 7px;
+	margin-right: 3px;
+	display: inline-block;
+}
+.votenum{
+	width: 50px;
+	height: 25px;
+	background: #fff;
+	color: #d44747;
+	float: right;
+	border-radius: 5px;
+	margin: 5px 5px 5px 0px;
+	line-height: 25px;
+	text-align: center;
+}
+.songName{
+	color: #fff;
+	font-size: 19px;
+	width: 105px;
+	height: 35px;
+	display: inline-block;
+	line-height: 35px;
+	text-shadow: 0px -1px 0px #3a3a3a;
+	margin-left: 5px;
+	float: left;
+}
+#songname{
+	height: 35px;
+	line-height: 35px;
+	margin: 0;
+	padding: 0;
+	width: 80px;
+	float: left;
+	text-align: center;
+	position: absolute;
+	left: 30px;
+}
+.singerName{
+	color: #919191;
+	font-size: 19px;
+	height: 35px;
+	width: 85px;
+	display: inline-block;
+	line-height: 35px;
+	background: #efefef;
+	border-radius: 5px;
+	float: right;
+	text-shadow: 0px 1px 0px #fff,0px 2px 0px #fff;
+}
+.songName img{
+	margin: 10px 5px;
+	height: 18px;
+	float: left;	
+}
+.singerName img{
+	margin: 10px 5px;
+	height: 18px;
+	float: left;	
+}
+
+#singerIcon{
+	
+}
+.intro{
+	background: #f6f6f6;
+	border-radius: 5px;
+	width: 250px;
+	color: #919191;
+	font-size: 12px;
+	margin: 0 auto;
+	padding: 10px;
+	margin-top: 5px;
+	text-align: left;
+	margin-bottom: 10px;
+	position: absolute;
+	top: 40px;
+	left:-30px;
+	font-family: "宋体";
+	font-weight: normal;
+}
+.player{
+	position: absolute;
+	bottom: 25px;
+	height: 110px;
+	background: #e1e1d9;
+	width: 360px;
+}
+.jp-progress{
+	height: 5px;
+	width: 360px;
+}
+.jp-seek-bar {
+	background: #bedbbe;
+	height: 5px;
+	width: 360px
+	cursor: pointer;
+}
+.jp-play-bar {
+	background: #048204;
+	width:0;
+	height:100%;
+}
+.footer{
+	height: 25px;
+	width: 360px;
+	position: absolute;
+	bottom: 0;
+	background: #cecece;
+	font-size: 8px;
+	text-align: center;
+	color: #919191;
+	line-height: 25px;
+	text-shadow: 0px 1px 0px #fff;
+	font-weight: normal;
+}
+.commentBoard{
+	background: url(../img/finals/BGpic.jpg) no-repeat;
+	background-size: 100%;
+	width: 480px;
+	height: 500px;
+	overflow: hidden;
+	float: right;
+	right: 0;
+	top: 0;
+	padding-top: 50px;
+	text-align: center;
+	float: right;
+	position: absolute;
+	z-index: -99;
+}
+.guide{
+	position: relative;
+	margin-top: -30px;
+}
+.guidebox{
+	border-radius: 5px;
+	font-size: 18px;
+	width: 100px;
+	height: 40px;
+	display: inline-block;
+	margin-left: 15px;
+	line-height: 40px;
+	color: #8c8c8c;
+	cursor: pointer;
+}
+.guideBoxBG{
+	width: 100px;
+	height: 40px;
+	position: absolute;
+	background: #fff;
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5; 
+	opacity:0.5;
+	border-radius: 5px;
+}
+#comment_guidebox{
+	background: #fff;
+	color: #52a652;
+}
+.songtext{
+	display: none;
+}
+.commentnum{
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	font-size: 10px;
+	background: url(../img/finals/commentnum.png) no-repeat;
+	background-size: 100% 100%;
+	color: #fff;
+	font-weight: normal;
+	position: absolute;
+	top: -10px;
+	left: 345px;
+}
+.lyrics{
+	color: #fff;
+	width: 320px;
+	height: 360px;
+	margin: 0 auto;
+	margin-top: 10px;
+	overflow: hidden;
+	text-align: center;
+	font-size: 18px;
+	font-weight: normal;
+	padding: 20px;
+	font-family: "微软雅黑";
+	white-space:pre;
+}
+
+.songinfo{
+	width: 480px;
+	height: 70px;
+	text-align: left;
+}
+.songinfoBG{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: #000;
+	filter:alpha(opacity=40);
+	-moz-opacity:0.4; 
+	opacity:0.4;
+	z-index: -1;
+}
+.S_singer{
+	color: #fff;
+	font-size: 20px;
+	float: left;
+	margin-top: 30px;
+	font-weight: normal;
+}
+.S_songname{
+	font-weight: normal;
+	color: #adeaad;
+	font-size: 40px;
+	float: left;
+	margin: 10px;
+}
+.commentList{
+	margin-top: 15px;
+	width: 480px;
+}
+.C_content{
+	width: 380px;
+	position: relative;
+	margin: 10px 0;
+}
+.C_contentBG{
+	background: #fff;
+	filter:alpha(opacity=25);
+	-moz-opacity:0.25; 
+	opacity:0.25;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: -1;
+}
+.user{
+	width: 40px;
+	height: 20px;
+	background: #dc9494;
+	color: #fff;
+	font-size: 15px;
+	float: left;
+}
+.usericon{
+	border-color: #dc9494 transparent transparent  #dc9494;
+	border-style: solid;
+	border-width: 10px; 
+	font-size: 0;
+	height: 0;
+	line-height: 0;
+	width: 0;
+	float: left;
+}
+.time{
+	width: 80px;
+	height: 20px;
+	background: #81a381;
+	color: #fff;
+	font-size: 14px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.timeicon{
+	border-color: transparent #81a381 #81a381 transparent;
+	border-style: solid;
+	border-width: 10px; 
+	font-size: 0;
+	height: 0;
+	line-height: 0;
+	width: 0;
+	position: absolute;
+	right: 80px;
+	bottom: 0;
+}
+.C_text{
+	text-align: left;
+	font-weight: normal;
+	font-size: 15px;
+	overflow-x: hidden;
+	width: 350px;
+	padding: 15px;
+}
+
+#lri{
+	font-family: "微软雅黑";
+}
+.voteBtn{
+	float: left;
+	margin-top: 30px;
+	margin-left: 20px;
+	width: 65px;
+	height: 65px;
+	background: url("../img/finals/btn.jpg") -130px 0px; 
+	cursor: pointer;
+}
+.voteBtn:hover{
+	background-position: -130px -65px; 
+}
+.voteedBtn{
+	float: left;
+	margin-top: 30px;
+	margin-left: 20px;
+	width: 65px;
+	height: 65px;
+	background: url("../img/finals/btn.jpg") -195px 0px; 
+	cursor: pointer;
+}
+.voteedBtn:hover{
+	background-position: -195px -65px; 
+}
+.modebtn{
+	float: left;
+	background: url("../img/finals/btn.jpg") -260px 0px; 
+	width: 65px;
+	height: 65px;
+	margin-top: 30px;
+	margin-left: 20px;
+	cursor: pointer;
+}
+.modebtn:hover{
+	background-position: -260px -65px; 
+}
+.mode2Btn{
+	float: left;
+	background: url("../img/finals/btn.jpg") -325px 0px; 
+	width: 65px;
+	height: 65px;
+	margin-top: 30px;
+	margin-left: 20px;
+	cursor: pointer;
+}
+.mode2Btn:hover{
+	background-position: -325px -65px; 
+}
+.pauseBtn{
+	background: url("../img/finals/btn.jpg") -65px 0px; 
+	width: 65px;
+	height: 65px;
+	margin-top: 30px;
+	float: left;
+}
+.pauseBtn:hover{
+	background-position: -65px -65px; 
+}
+.playBtn{
+	background: url(../img/finals/btn.jpg) no-repeat;
+	width: 65px;
+	height: 65px;
+	margin-top: 30px;
+	float: left;
+}
+.playBtn:hover{
+	background-position: 0px -65px;
+}
+#img{
+    width: 245px;
+	height: 245px;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+}
+.send{
+	position: absolute;
+	bottom: 20px;
+	left: 50px;
+	width: 380px;
+	height:70px;
+}
+.sendBG{
+	width: 100%;
+	height: 100%;
+	background: #000;
+	filter:alpha(opacity=17);
+	-moz-opacity:0.17; 
+	opacity:0.17;
+	position: absolute;
+	z-index: -1;
+}
+textarea{
+	resize:none;
+	width: 307px;
+	height:35px;
+	border: none;
+	outline: none;
+	margin: 7px;
+	float: left;
+	padding: 0;
+	color: #3a3a3a;
+	padding: 10px;
+}
+.submit{
+	width: 55px;
+	height: 55px;
+	background: url(../img/finals/submitbtn.jpg) 0px -55px no-repeat;
+	background-size:100%;
+	position: absolute;
+	right: 7px;
+	top: 7px;
+}
+.Clist{
+	height: 370px;
+	width: 380px;
+	margin: 0 auto;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	padding: 0 20px;
+}
+.jp-current-time,.jp-duration{
+	background: #fff;
+	width: 40px;
+	height: 20px;
+	font-size: 11px;
+	color: #3d773d;
+	margin: 10px;
+	border-radius: 5px;
+	line-height: 20px;
+	text-align: center;
+	box-shadow: 0px 1px 1px #616161;
+}
+.jp-current-time{
+	float: left;
+}
+.jp-duration{
+	float: right;
+	color: #919191;
+}
+#submitBtn{
+	position:absolute;
+	z-index: 999;
+	bottom: 8px;
+	right: 7px;
+	width: 55px;
+	height: 55px;
+	filter:alpha(opacity=0);
+	-moz-opacity:0;
+	opacity:0;
+}
+#shareBtn{
+	position: absolute;
+	filter:alpha(opacity=0);
+	-moz-opacity:0;
+	opacity:0;
+	right: -5px;
+	top: -5px;	
+	z-index: 999;
+	width: 40px;
+	height: 30px;
+}
+.slidebox{
+	width: 150px;
+	height: 0px;
+	position: absolute;
+	top: 150px;
+	display: none;
+}
+.playbtn,.weibobtn{
+	width: 40px;height: 40px;
+	position: absolute;
+	z-index: 999;
+	top: 150px;
+}
+.playbtn{
+	left: 20px;
+}
+.weibobtn{
+	left: 75px;
+}
+.slideboxBG{
+	width: 150px;
+	height: 100%;
+	background: black;
+	filter:alpha(opacity=60);
+	-moz-opacity:0.6; 
+	opacity:0.6;
+	position: absolute;
+}
+.photo{
+	width: 150px;
+	height: 150px;
+}

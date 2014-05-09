@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<title>Index</title>
+        <load href="/Public/css/bootstrap.css" />  
+		<load href="/Public/css/bootstrap-responsive.css" /> 
+	 
+	</head>
+
+	<body>
+
+
+		
+		<table border=1 align='center' width='500'>
+			<caption><h1>MUSIC</h1></caption>
+			<tr>
+				<th>no</th>
+				<th>name</th>
+				<th>song_name</th>
+				<th>vote_count</th>
+				<th></th>
+				
+			</tr>
+			<volist name='data' id='vo'>
+			<tr>
+			
+				<td>{$vo.no}</td>
+				<td>{$vo.name}</td>
+				<td>{$vo.song_name}</td>
+				<td>{$vo.vote_count}</td>
+				<td><a href="__URL__/del/id/{$vo.id}">删除</a>|<a href="__URL__/modify/id/{$vo.id}">修改</a></td>
+				
+			</tr>
+				</volist>
+		
+			</table>
+			
+			</br></br>
+			<center>
+			<a href='__URL__/add'>添加新数据</a>
+			</center>
+		
+
+	
+	
+	
+	</body>
+
+
+</html>

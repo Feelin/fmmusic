@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta name="KEYWords" content="暨大星球杯网上歌唱比赛决赛"/>
+	<meta name='description' content='暨南大学的线上歌唱大赛决赛 由暨南FM工作室主办'/>
+	<meta name="author" content="JnuFM studio"/> 
+	<meta name="viewport"  content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+	<meta name="Robots" contect="all">
+	<meta name="revisit-after" content="1 days"> 
+	<title>【星球杯网络歌唱大赛决赛】{$data.name}-{$data.song_name}</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/finals.css" />
+    <link rel="shortcut icon" href="__PUBLIC__/img/finals/icon.jpg" type="image/x-icon" sizes="16x16"/>
+</head>
+					<!-----------------------------------------------------------------------------------
+					_____________________________________________________________________________________
+					|                                                                                   |
+					|                           暨南FM工作室技术岗实习生招聘启事                        |
+					|                                                                                   |
+					|    【招聘岗位】                                                                   |
+					|                                                                                   |
+					|                    -后台研发工程师     2人                                        |
+					|        开发类-     -应用研发工程师     2人                                        |
+					|                    -网页前端工程师     1人                                        |
+					|                    -测试开发工程师     1人                                        |
+					|                                                                                   |
+					|                    -视觉设计师         1人                                        |
+					|        设计类-     -交互设计师         1人                                        |
+					|                    -UI设计师           1人                                        |
+					|                                                                                   |
+					|        业务类-     -产品狗             1人                                        |
+					|                                                                                   |
+					|                                                                                   |
+					|    【团队介绍】                                                                   |
+					|                                                                                   |
+					|       暨南FM工作室成立于2012年，是一个完全独立的校内民间技术团队，我们致力于      |
+					|     打造出最完美的产品并服务于广大暨南学子。现在已经受到了校方的大力支持，拥      |
+					|     有部分学校服务器资源，同时在校内外都拥有独立的工作室。目前暨南FM旗下的产      |
+					|     品有"暨南FM"微信公众账号和"暨大榕树"新浪微博树洞等。还有更多产品正在研发      |
+					|     中。如果你和我们拥有一样的目标和理念，并且你也热爱互联网事业，请加入我们！    |
+					|                                                                                   |
+					|                                                                                   |
+					|    【应聘须知】                                                                   |
+					|                                                                                   |
+					|       应聘者将会有为期一个月的实习期，请有意应聘者发个人简历至hr@jnu.fm。         |
+					|                                                                                   |
+					|                                                                                   |
+					|                                                                   暨南FM工作室    |
+					|                                                                   2013年11月1日   |
+					|___________________________________________________________________________________|
+					 ------------------------------------------------------------------------------------>
+<body>
+
+<div class="container">
+	<div class="title">
+		<a href="#1" id="first"></a>
+		<a href="#2" id="second"></a>
+		<a href="#3" id="third"></a>
+		<a href="#4" id="fourth"></a>
+		<img src="__PUBLIC__/img/finals/title.png">
+	</div>
+
+	<div class="singerBoard">
+		<div class="titlebar">
+			决赛选手
+		</div>
+		<div class="content">
+			<div class="contentBG"></div>
+			<foreach name="newsong" item="newsong">
+				<div class="singerInfo">
+				<div class="numlabel"></div>
+				<div class="numlabeltriangle"></div>
+				<div class="singerPhoto">
+					<img class="photo" src="{$newsong.imgurl}">
+					<div class="slidebox">
+						<div class="slideboxBG"></div>
+						<a href="http://fmmusic.sinaapp.com/?id={$newsong.id}"><img class="playbtn" src="__PUBLIC__/img/finals/playbtn.png"></a>
+						<a target="_blank" href="{$newsong.weibourl}"><img class="weibobtn" src="__PUBLIC__/img/finals/weibobtn.png"></a>
+					</div>
+				</div>
+				<div class="singerName">{$newsong.name}</div>
+				<div class="voteNum"><img src="__PUBLIC__/img/finals/like.png" alt="">{$newsong.vote_count}</div><br/>
+				<div class="songName">{$newsong.song_name}</div>
+				</div>
+			</foreach>	
+
+		</div>
+	</div>
+<a name="1"></a>
+	<div class="review">
+		<div class="reviewtopbar">第一轮歌曲回顾</div>
+		<div class="songlist">
+			<div class="pager">
+				<div class="up"><div class="upicon"></div></div>
+				<div class="down"><div class="downicon"></div></div>
+			</div>
+			<ul indexpage="1">
+				<li></li>
+				<foreach name="song1" item="song">
+				<li>
+				<a href="http://fmmusic.sinaapp.com/?id={$song.id}" target="_blank">
+					<div class="liBGwhite"></div>
+					<div class="Rnum"></div>
+					<div class="Rsingername">{$song.name}</div>
+					<div class="Rsongname">{$song.song_name}</div>
+					</a>
+				</li>					
+				</foreach>	
+				<li><div class="liBGwhite"></div></li>
+				<li><div class="liBGwhite"></div></li>
+				<li><div class="liBGwhite"></div></li>
+				<li><div class="liBGwhite"></div></li>
+				<li><div class="liBGwhite"></div></li>
+				<li><div class="liBGwhite"></div></li>	
+				<li></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="video">
+		<div class="videotopbar">星球杯歌唱大赛MV【拉面娘+张潆心+许杰智】</div>
+		<div class="videobox">
+			<div class="videoBG"></div>
+			<div class="videourl">
+				<embed src="http://static.video.qq.com/TPout.swf?vid=t0121mc9mgv&auto=0" allowFullScreen="true" quality="high" width="600" height="350" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+			</div>
+		</div>
+	</div>
+
+<a name="2"></a>
+<div class="video">
+		<div class="videotopbar">星球杯歌唱大赛MV【小胖+李杰民】</div>
+		<div class="videobox">
+			<div class="videoBG"></div>
+			<div class="videourl">
+				<embed src="http://static.video.qq.com/TPout.swf?vid=s0122hoq5ol&auto=0" allowFullScreen="true" quality="high" width="600" height="350" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="review" id="placeright">
+		<div class="reviewtopbar">第二轮歌曲回顾</div>
+		<div class="songlist">
+			<div class="pager">
+				<div class="up"><div class="upicon"></div></div>
+				<div class="down"><div class="downicon"></div></div>
+			</div>
+			<ul indexpage="1">
+				<li></li>
+				<foreach name="song2" item="song">
+				<li>
+				<a href="http://fmmusic.sinaapp.com/?id={$song.id}" target="_blank">
+					<div class="liBGwhite"></div>
+					<div class="Rnum"></div>
+					<div class="Rsingername">{$song.name}</div>
+					<div class="Rsongname">{$song.song_name}</div>
+					</a>
+				</li>			
+				</foreach>			
+				<li></li>
+			</ul>
+		</div>
+	</div>
+	
+<a name="3"></a>
+	<div class="review">
+		<div class="reviewtopbar">第三轮歌曲回顾</div>
+		<div class="songlist">
+			<div class="pager">
+				<div class="up"><div class="upicon"></div></div>
+				<div class="down"><div class="downicon"></div></div>
+			</div>
+			<ul indexpage="1">
+				<li></li>
+				<foreach name="song3" item="song">
+				<li>
+				<a href="http://fmmusic.sinaapp.com/?id={$song.id}" target="_blank">
+					<div class="liBGwhite"></div>
+					<div class="Rnum"></div>
+					<div class="Rsingername">{$song.name}</div>
+					<div class="Rsongname">{$song.song_name}</div>
+					</a>
+				</li>			
+				</foreach>		
+				<li><div class="liBGwhite"></div></li>
+				<li><div class="liBGwhite"></div></li>
+				<li><div class="liBGwhite"></div></li>
+				<li><div class="liBGwhite"></div></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="video">
+		<div class="videotopbar">星球杯歌唱大赛选手MV【王旭+阮绒清】</div>
+		<div class="videobox">
+			<div class="videoBG"></div>
+			<div class="videourl">
+				<embed src="http://static.video.qq.com/TPout.swf?vid=f0122l2wi49&auto=0" allowFullScreen="true" quality="high" width="600" height="350" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+
+			</div>
+		</div>
+	</div>
+
+<a name="4">
+	<div class="video">
+		<div class="lastvideotopbar">星球杯校园歌手大赛宣传片</div>
+			<div class="videobox">
+				<div class="lastvideoBG"></div>
+				<div class="videourl">
+					<embed wmode="direct" flashvars="vid=d0122c1l7po&amp;tpid=0&amp;showend=1&amp;showcfg=1&amp;searchbar=1&amp;shownext=1&amp;list=2&amp;autoplay=0&amp;title=%E6%98%9F%E7%90%83%E6%9D%AF%E6%A0%A1%E5%9B%AD%E6%AD%8C%E6%89%8B%E5%A4%A7%E8%B5%9B%E5%AE%A3%E4%BC%A0%E7%89%871&amp;outhost=http%3A%2F%2Fv.qq.com%2Fboke%2Fpage%2Fd%2Fp%2Fo%2Fd0122c1l7po.html" src="http://imgcache.qq.com/tencentvideo_v1/player/TencentPlayer.swf?max_age=86400&amp;v=20121230" quality="high" name="tenvideo_flash_player_1386518730050" id="tenvideo_flash_player_1386518730050" bgcolor="#000000" width="600" height="350" align="middle" allowscriptaccess="always" allowfullscreen="true" type="application/x-shockwave-flash" pluginspage="http://get.adobe.com/cn/flashplayer/">
+				</div>
+			</div>
+		</div>
+	<div class="review" id="placeright">
+		<div class="introtopbar" >赛事简介</div>
+		<img id="starlogo" src="__PUBLIC__/img/finals/starlogo.jpg">
+		<div class="introinfo">主办<br/> <div class="team"><div id="f">F</div><div id="m">M</div>工作室</div><br>星球杯网络歌唱 <br>大赛本着公平，公正<br>自由原则<br> 为广大歌唱爱好者<br>提供一个展示的平台</div>
+		<img id="fmlogo" src="__PUBLIC__/img/finals/fmlogo.jpg">
+		<div class="all">共有76位选手参与 <br>收录88首作品</div>
+	</div>
+
+	<br>	
+<div class="footer">
+	<div class="footertitle">主办</div>
+	<div class="card">
+		<div id="code2d"></div>
+		<img id="logo" src="__PUBLIC__/img/finals/logo.jpg">
+		<div class="footercontent">
+			<div class="F_title">FM工作室</div>
+			<div class="F_text">
+				暨南大学自由的民间技术团队 <br>
+				专注互联网产品，技术，运营  
+			</div>
+				<a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=-ZeTiJuQvYyM056SkA" style="text-decoration:none;"><img class="footerbtn"src="__PUBLIC__/img/finals/mail.png"></a>
+				<a target="_blank" href="http://weibo.com/jnufm"><img class="footerbtn"src="__PUBLIC__/img/finals/myweibobtn.png"></a>
+				<a id="wechat" href="javascript:;"><img class="footerbtn"src="__PUBLIC__/img/finals/wechatbtn.png"></a>
+			
+		
+		</div>
+	</div>
+
+	<div class="footertitle" id="footertitle2">协办</div>
+	<div class="card" id="Jnurencard">
+		<div class="logos" id="Jnuren"></div>
+		<div class="footercontent" >
+			<div class="F_title" id="JnurenTitle">暨南大学暨南人网</div>
+			<div class="F_text" id="Jnurentext">
+				暨南大学最大非官方微博 <br>
+				专属【暨南人网络联盟】  
+			</div>
+			<a target="_blank" href="http://weibo.com/jnuren"><img class="footerbtn"src="__PUBLIC__/img/finals/myweibobtn.png"></a>
+		</div>
+	</div>
+	<div class="card" id="cijiaocard">
+		<div class="logos" id="cijiao"></div>
+		<div class="footercontent" >
+			<div class="F_title" id="cijiaoTitle">赤脚公益</div>
+			<div class="F_text" id="cijiaoText">
+				深旅学院自发自足的公益团体 <br>
+				用赤脚践行爱与公益
+			</div>
+			<a target="_blank" href="http://e.weibo.com/walkingwithlove"><img class="footerbtn"src="__PUBLIC__/img/finals/myweibobtn.png"></a>
+		</div>
+	</div>
+	<div class="card" id="weicard">
+		<div class="logos" id="wei"></div>
+		<div class="footercontent"  >
+			<div class="F_title" id="weiTitle">大众微记忆</div>
+			<div class="F_text" id="weitext">
+				专业摄影后期导演视频团队 <br>
+				圆你心中的明星梦！
+			</div>
+			<a target="_blank" href="http://weibo.com/micromemory"><img class="footerbtn"src="__PUBLIC__/img/finals/myweibobtn.png"></a>
+		</div>
+	</div>
+	<div class="card" id="duomicard">
+		<div class="logos" id="duomi"></div>
+		<div class="footercontent" >
+			<div class="F_title" id="duomiTitle">多米文化</div>
+			<div class="F_text" id="duomiText">
+				秉承创意优先，传播文化<br>
+				专注各地文化创意纪念品
+			</div>
+			<a target="_blank" href="http://weibo.com/u/3062639005"><img class="footerbtn"src="__PUBLIC__/img/finals/myweibobtn.png"></a>
+		</div>
+	</div>
+	<div class="empty"></div>
+
+</div>
+</div>
+<script src="http://cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript">
+function pager(ul,dir){
+	var indexpage = ul.attr("indexpage");
+	var allpage = (ul.children("li").size()-2)/8;
+	if(dir=="up"){
+		if(indexpage==1){
+			indexpage = Number(allpage) +1;
+		}
+		ul.attr("indexpage", Number(indexpage)-1);
+	}
+	else if(dir="down"){
+		if(indexpage==allpage){
+			indexpage = 0;
+		}
+		ul.attr("indexpage", Number(Number(indexpage)+1));
+	}
+	indexpage = ul.attr("indexpage");
+	begin = (indexpage-1)*8+1;
+	end = indexpage*8;
+	ul.children("li").css("display","block");
+	ul.children("li:lt("+begin+")").css("display","none");
+	ul.children("li:gt("+end+")").css("display","none");
+}
+$(function(){
+
+	$(".singerInfo").hover(function(){
+		_this = $(this);
+		trigger = setTimeout(function(){
+			_this.children(".singerPhoto").children(".slidebox").css("display","block").animate({"height":"150px","top":"0px"},"fast");
+			_this.children(".singerPhoto").children(".slidebox").find("img").css("display","block").animate({"top":"100px"},"fast");
+		},200);
+	},
+	function(){
+		clearTimeout(trigger);
+		_this.children(".singerPhoto").children(".slidebox").animate({"height":"0px","top":"150px"},"fast").css("display","none");
+		_this.children(".singerPhoto").children(".slidebox").find("img").animate({"top":"150px"},"fast",function(){
+		$(this).css("display","none");
+		});
+	});
+
+	$("li").hover(function(){
+		$(this).children().children(".Rsongname").css("color","#e37532");
+		$(this).children().children(".Rsingername").css("color","#e37532");
+		$(this).children().children(".Rnum").css("background-position","0px -25px");
+		$(this).children("a").prepend('<div class="playthis"><div class="playicon"></div></div>');
+	},
+	function(){
+		$(this).children().children(".Rsongname").css("color","#ffc6d3");
+		$(this).children().children(".Rsingername").css("color","#fff");
+		$(this).children().children(".Rnum").css("background-position","0px 0px");
+		$(".playthis").remove();
+	});
+	$(".songlist").hover(function(){
+		songlist = $(this);
+		t = setTimeout(function(){
+		songlist.children(".pager").animate({width:"45px"});
+		},200);
+	},
+	function(){
+		clearTimeout(t);
+		songlist.children(".pager").animate({width:"0px"},"slow");
+	});
+
+	$(".liBGwhite:even").removeClass().addClass("liBGblack");
+	$("ul").each(function(){
+		var indexpage = $(this).attr("indexpage");
+		var end = indexpage*8+1;
+		$(this).children("li:lt("+end+")").css("display","block");
+		$(this).children("li").eq(0).css("display","none");
+	});
+
+	$("li").each(function(){
+		var index = $(this).index();
+		$(this).children().children(".Rnum").text(index);
+	});
+
+	$(".up").click(function(){
+		pager($(this).parent().parent().children("ul"),"up");
+	});
+	$(".down").click(function(){
+		pager($(this).parent().parent().children("ul"),"down");
+	});
+	$(".singerInfo").each(function(){
+		var i = $(this).index();
+		$(this).children(".numlabel").text(i);
+	});
+	$("#wechat").hover(function(){
+		$("#code2d").animate({"opacity":"1","-moz-opacity":"1","filter":"alpha(opacity=100)"},"slow");
+		},
+		function(){
+		$("#code2d").animate({"opacity":"0","-moz-opacity":"0","filter":"alpha(opacity=0)"},"slow");
+	});
+});
+	
+
+</script>
+</body>
+</html>

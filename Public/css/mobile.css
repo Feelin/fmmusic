@@ -1,0 +1,330 @@
+html{
+	width: 100%;
+	height: 100%;
+}
+body{
+	margin: 0px;
+	background: #363636 url("../mobileImg/mobileBG.jpg") no-repeat;
+	background-position:center;
+	position: relative;
+	font-family: "微软雅黑";
+	/* vertical-align: baseline; */
+	display: block;
+	padding: 0;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+}
+img{
+	border:none;
+}
+input{
+	outline: none;
+}
+.container{
+	width: 100%;
+	position: relative;
+	margin: 0px auto;
+}
+.logo{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+.logo img{
+	width: 150px;
+	display: block;
+}
+label.title{
+	position: relative;
+	left: 50px;
+}
+.songInfo{
+	position: absolute;
+	top: 120px;
+	left: 0;
+	width: 250px;
+	height: 150px;
+	text-align: left;
+	overflow: hidden;
+}
+.songName{
+	font-size: 40px;
+	margin-left: 15px;
+	white-space: nowrap;
+	text-overflow:elipsis;
+	float: left;
+}
+.clear{
+	clear: both;
+}
+.otherInfo{
+	width: 220px;
+	height: 60px;
+	margin-top: 10px;
+}
+.blackBG{
+	background: #000;
+	width: 100%;
+	height: 60px;
+	position: absolute;
+	filter:alpha(opacity=25);
+	-moz-opacity:0.25;
+	opacity:0.25;
+	z-index: -1;
+}
+.otherInfo label{
+	margin-top: 10px;
+	display: inline-block;
+	font-size: 26px;
+}
+.songId {
+	width: 50px;
+	margin-left: 10px;
+}
+.singer{
+	font-size: 30px !important;
+	color: #bdd7c2;
+	width: 100px;
+	white-space: nowrap;
+}
+.voteBtn{
+	float: right;
+	width: 60px;
+	margin-right: -30px;
+}
+.voteBtn img{
+	width: 60px;
+	height: 60px;
+}
+.bottomBar{
+	width: 100%;
+	border-top: 5px solid #ffa043;
+	position: absolute;
+	top: 320px;
+	background: #363636;
+	-moz-box-shadow: 0px -6px 40px #000; 
+	box-shadow: 0px -6px 40px #000;
+}
+.sumbitBtn{
+	height: 60px;
+	margin-bottom: 20px;
+	width: 90%;
+	clear: both;
+}
+#circle{
+	position: absolute;
+	top: -35px;
+	left: 50%;
+}
+#circle img{
+	width: 70px;
+	height: 70px;
+	margin-left: -35px;
+}
+.tag{
+	width: 50%;
+	height: 40px;
+	background-color: #282828;
+	float: left;
+	padding-top: 20px;
+	font-size: 20px;
+}
+#info{
+	background: #363636;
+}
+#comment{
+	background: #282828;
+}
+.currentPage{
+	background-color:#363636 !important; 
+}
+
+.infoCard{
+	width: 80%;
+	min-width: 200px;
+	margin: 90px auto;
+	background: #262626;
+	padding: 20px;
+	font-size: 20px;
+}
+.photo{
+	width: 120px;
+	height: 120px;
+	display: inline-block;
+	float: left;
+}
+.photo img{
+	width: 120px;
+	height: 120px;
+}
+.detail{
+	width: 45%;
+	height: 33px;
+	float: left;
+	margin-left: 20px;
+	font-size: 17px;
+}
+.tableHead{
+	width: 35%;
+	height: 22px;
+	float: left;
+	background: #b6b6b6;	
+	color: #444444;
+}
+.data{
+	width: 64%;
+	height: 22px;
+	float: left;
+	background: #007566;
+
+}
+.clearfloat{
+	clear: both;
+}
+.intro{
+	background: #b7cac8;
+	min-height: 200px;
+	color: #00473e;
+	padding: 10px;
+	text-align: left;
+	margin-top: 20px;
+	position: relative;
+}
+.footer{
+	position: absolute;
+	bottom: 15px;
+	left: 50%;
+	margin-left: -55px;
+}
+.triangle{
+	border-color: transparent transparent #b7cac8 transparent;
+	border-style: dashed dashed solid dashed;
+	border-width: 20px; 
+	font-size: 0;
+	height: 0;
+	line-height: 0;
+	position: absolute;
+	top: -39px;
+	left: 60px;
+}
+.commentCard{
+	width: 100%;
+	min-width: 200px;
+	margin: 90px auto 30px auto;
+	font-size: 20px;
+	display: block;
+	padding-bottom: 20px;
+	display: none;
+}
+textarea{
+	resize:none;
+	height: 100px;
+	outline: none;
+	display: block;
+}
+#commentText{
+	border: none;
+	width: 90%;
+	height: 100px;
+	font-size: 18px;
+	margin: 0px 0px 20px 15px;
+	float: left;
+}
+.commentList{
+	text-align: left;
+	border-bottom: 2px #fff dashed;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+}
+
+#sumbitBtn{
+	height: 60px;
+	position: relative;
+	left: -10px;
+	margin-left: 20px;
+
+}
+label.btn{
+	position: relative;
+	top: -50px;
+	font-size: 24px;
+}
+
+#voteCount{
+	background: #975f5f;
+}
+.C_content{
+	padding: 10px;
+	overflow: auto;
+	width: 85%;
+	margin-left: 15px;
+	display: block;
+	text-decoration: none;
+	color: #fff;
+}
+.C_content:hover{
+	background: #252525;
+}
+.C_text{
+
+}
+.firstComment{
+
+}
+.doubleComment{
+	margin: 5px 5px 5px 25px;
+	padding: 5px;
+}
+.toid,.C_id,.number{
+	display: none;
+}
+.C_time{
+	float: right;
+	font-size: 13px;
+}
+label.red{
+	color: #ffbbbb;
+}
+label.blue{
+	color: #ace9ff;
+}
+.hotcomment{
+	float: right;
+}
+.C_content {
+	border-bottom: #424242 1px solid;
+	border-top: #2a2a2a 1px solid;
+}
+.last{
+	position: absolute;
+	width: 70px;
+	height: 30px;
+	left: 0;
+	top: 275px;
+	line-height: 30px;
+}
+.next{
+	position: absolute;
+	width: 70px;
+	height: 30px;
+	right: 0;
+	top: 275px;
+	line-height: 30px;
+}
+.lastBG,.nextBG{
+	width: 70px;
+	height: 30px;
+	background: #000;
+	filter:alpha(opacity=25);
+	-moz-opacity:0.25;
+	opacity:0.25;
+	position: absolute;
+}
+.lastBG{
+	border-radius: 0px 5px 5px 0px;
+}
+.nextBG{
+	border-radius: 5px 0px 0px 5px;
+}

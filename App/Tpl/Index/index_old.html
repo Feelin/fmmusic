@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta name="KEYWords" content="暨大星球杯网上歌唱比赛"/>
+	<meta name='description' content='暨南大学的线上歌唱大赛'/>
+	<meta name="author" content="JnuFM studio"/> 
+	<meta name="viewport"  content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+	<meta name="Robots" contect="all">
+	<meta name="revisit-after" content="1 days"> 
+	<title>【星球杯网络歌唱大赛】{$data.name}-{$data.song_name}</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css" />
+    <link rel="shortcut icon" href="__PUBLIC__/img/icon.jpg" type="image/x-icon" sizes="16x16"/>
+</head>
+					<!-----------------------------------------------------------------------------------
+					_____________________________________________________________________________________
+					|                                                                                   |
+					|                           暨南FM工作室技术岗实习生招聘启事                        |
+					|                                                                                   |
+					|    【招聘岗位】                                                                   |
+					|                                                                                   |
+					|                    -后台研发工程师     2人                                        |
+					|        开发类-     -应用研发工程师     2人                                        |
+					|                    -网页前端工程师     1人                                        |
+					|                    -测试开发工程师     1人                                        |
+					|                                                                                   |
+					|                    -视觉设计师         1人                                        |
+					|        设计类-     -交互设计师         1人                                        |
+					|                    -UI设计师           1人                                        |
+					|                                                                                   |
+					|        业务类-     -产品狗             1人                                        |
+					|                                                                                   |
+					|                                                                                   |
+					|    【团队介绍】                                                                   |
+					|                                                                                   |
+					|       暨南FM工作室成立于2012年，是一个完全独立的校内民间技术团队，我们致力于      |
+					|     打造出最完美的产品并服务于广大暨南学子。现在已经受到了校方的大力支持，拥      |
+					|     有部分学校服务器资源，同时在校内外都拥有独立的工作室。目前暨南FM旗下的产      |
+					|     品有"暨南FM"微信公众账号和"暨大榕树"新浪微博树洞等。还有更多产品正在研发      |
+					|     中。如果你和我们拥有一样的目标和理念，并且你也热爱互联网事业，请加入我们！    |
+					|                                                                                   |
+					|                                                                                   |
+					|    【应聘须知】                                                                   |
+					|                                                                                   |
+					|       应聘者将会有为期一个月的实习期，请有意应聘者发个人简历至hr@jnu.fm。         |
+					|                                                                                   |
+					|                                                                                   |
+					|                                                                   暨南FM工作室    |
+					|                                                                   2013年11月1日   |
+					|___________________________________________________________________________________|
+					 ------------------------------------------------------------------------------------>
+<body>
+	<div class="container">
+	
+		<div class="topbar">
+			<a href="http://fmmusic.sinaapp.com/">
+				<img class="logo" src="__PUBLIC__/img/logo.png"/>
+				<img class="logoChild" src="__PUBLIC__/img/logoChild.png"/>
+				<a target="_blank" href="http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5NDcxODk0MA==&appmsgid=10000341&itemidx=1&sign=c7fcc57ee82baf26911b63d54ecd9895#wechat_redirect">
+					<div class="join">
+						<div class="joinBG"></div>报名方式
+					</div>
+				</a>
+			</a>
+		</div>
+		<div class="player">
+			<a href="javascript:;" >
+				<div class="next" onclick="shunxu(1)" >></div>
+			</a>  
+			<a href="javascript:;" >
+				<div class="last" onclick="shunxu(2)">&#60;</div>
+			</a>
+			
+			<div class="playerBG"></div>
+			<div class="singerPhoto">
+				<img src="{$data.imgurl1}">  
+				<div class="songInfoBG"></div>
+				<div class="songInfo">
+					<div class="songname"><img src="__PUBLIC__/img/songIcon.png"/>
+						<div id="songName">{$data.song_name}</div>
+					</div>    
+					<div class="singername"><img src="__PUBLIC__/img/singerIcon.png"/>
+						<div id="singerName">{$data.singer}</div>
+					</div>                             
+				</div>
+			</div>
+
+			<div class="userInfo">
+                <label id="num">{$data.no}</label>                          
+				<label>&nbsp;</label>
+                <a title="查看其个人微博" id="weibourl" target="_blank" href="{$data.weibourl}">
+                	<label id="username">{$data.name}</label>
+                	<img id="weibologo" src="__PUBLIC__/img/weibologo.png"/>   
+                </a>   
+
+                <a id="playMode" href="javascript:;" title="单曲循环">
+                	<div class="playMode"></div>  
+                </a>
+                  
+				<div class="textBlock">
+                    <p class="userIntro"> {$data.summary} </p>                
+					<div class="textBG"></div>				
+				</div>
+			</div>
+
+			<div id="jp_container_1" >
+				<div class="jp-progress">
+	                <div class="jp-seek-bar">
+	                    <div class="jp-play-bar"></div>
+	                </div>
+	            </div>
+            </div>
+
+			<div class="recordInfo">
+				<div class="iconInfo">
+					<img src= "__PUBLIC__/img/viewIcon.png"><a title="阅览次数" id="viewCount">{$data.view_count}</a>     
+				</div>
+				<div class="iconInfo">
+					<img src="__PUBLIC__/img/downloadIcon.png"><a title="下载次数" id="downloadCount">{$data.dl_count}</a>  
+				</div>
+				<div class="iconInfo">
+					<img src="__PUBLIC__/img/likeIcon.png"><a title="投票次数" id="likeCount">{$data.vote_count}</a>           
+				</div>
+				<div class="iconInfo">
+					<img src="__PUBLIC__/img/playIcon.png"><a title="播放次数" id="playCount">{$data.play_count}</a>             
+				</div>
+			</div>
+			
+			<a href="{$data.song_url}" target="_blank" id="downloadmp3">
+				<div class="downloadBtn"></div>
+			</a>
+			
+		</div>
+		<div class="Btn">		
+
+			<div id="jquery_jplayer_1" ></div>
+			<div id ="jp_container_1" >	
+				<a class="jp-play" href="javascript:;" tabindex="1"><div class="playBtn"></div></a>	    
+				<a href="javascript:;" class="jp-pause" tabindex="1"><div class="pauseBtn"></div></a>	    
+			</div>
+			
+			<a id="voteBtn" href="javascript:;"><div class="voteBtn"></div></a>
+			
+			<div id="songListBtn">
+				<div class="songListBtn"></div>
+			<!-- 	<div class="songList">
+				<div id="S_list">
+					<a class="S_info" href="http://fmmusic.sinaapp.com/?id={$song.id}">
+						<div class="S_id"></div>
+						<div class="S_singer"></div>
+						<div class="S_name"></div>
+					</a>						
+				</div>
+				<div class="triangle"></div>
+			</div> -->
+			</div> 
+		</div>
+
+		<div class="popbox">	
+			<div id="closePopbox"></div>
+		</div>
+
+		<div class="playListBG"></div>
+		<div class="playList">	
+			<foreach name="songlist" item="song">
+				<a class="P_info" href="http://fmmusic.sinaapp.com/?id={$song.id}">
+					<img class="P_img" src="{$song.imgurl2}">					
+					<div class="P_name">{$song.song_name}</div>
+					<div class="P_singer"><div class="P_singerBG"></div>{$song.name}</div>
+				</a>
+			</foreach>		
+			<div class="P_info_empty"></div>
+		</div>
+
+	<div class="footer"> Copyright © 2013 All Right Reserved JnuFM Studio</div>	
+	</div> 
+
+	
+	
+	<div class="commentBG"></div>
+
+	<div class="comment">
+		<div class="C_topbarBG"></div>
+		<div class="C_topbar">		
+			全部评论 (
+			<label id="comment_num"> 0 </label>
+			) 条	
+		</div>
+		<div class="C_list">
+		
+		</div>
+		<div class="C_inputBG"></div>
+		<div class="C_input">
+            <input type='hidden' name='sid' value="{$data.id}">        
+             <input type='hidden' name='toid' value="1"> 
+			<textarea name="content" id="commentText" rows="2" cols="23" >在这里输入对歌手的说的话哦</textarea>
+			<div class="sendBtn"></div>
+			<button id="submitBtn" type="submit" value="发送" disabled="disabled"/>
+		</div>
+	</div>
+	
+
+<!-- Baidu Button BEGIN -->
+<script type="text/javascript" id="bdshare_js" data="type=slide&amp;img=5&amp;pos=left&amp;uid=0" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+var bds_config={"bdTop":125};
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
+</script>
+<!-- Baidu Button END -->
+
+
+	<script type="text/javascript"  src="__PUBLIC__/js/jquery1.4.2.js"></script>
+	<script type="text/javascript"  src="__PUBLIC__/js/jquery.jplayer.min.js"></script>
+
+	<script type="text/javascript">
+
+function setCookie(c_name,value,expiredays)
+{
+var exdate=new Date()
+exdate.setDate(exdate.getDate()+expiredays)
+document.cookie=c_name+ "=" +escape(value)+
+((expiredays==null) ? "" : ";expires="+exdate.toGMTString())
+}
+
+function getCookie(c_name)
+{
+if (document.cookie.length>0)
+  {
+  c_start=document.cookie.indexOf(c_name + "=")
+  if (c_start!=-1)
+    { 
+    c_start=c_start + c_name.length+1 
+    c_end=document.cookie.indexOf(";",c_start)
+    if (c_end==-1) c_end=document.cookie.length
+    return unescape(document.cookie.substring(c_start,c_end))
+    } 
+  }
+return ""
+}
+	$(function(){
+
+		PlCount = {$data.play_count};
+		DlCount = {$data.dl_count};
+		VoCount = {$data.vote_count};
+		ViCount = {$data.view_count};
+
+	$("#jquery_jplayer_1").jPlayer({
+        ready: function () {
+            $(this).jPlayer("setMedia", {
+                mp3:"{$data.song_url}"
+            });
+        },
+        swfPath: "js",
+        supplied: "mp3",
+        wmode: "window",
+        smoothPlayBar: true,
+        keyEnabled: true,
+        ended: function (event) {
+        	switch(playMode){
+        		case 1:
+        		$(this).jPlayer("play");
+				$.get("http://fmmusic.sinaapp.com/index.php/Play/index",
+					{
+						"sid" : {$data.id}
+					},
+					function(){
+						PlCount++;
+						$("#playCount").text(PlCount);
+					}
+				);
+				break;
+				case 2:
+					shunxu(1);
+				break;
+				case 3:
+					location.href = "http://fmmusic.sinaapp.com/Index/random/?id=1";
+				break;
+        	}                		
+		}
+    });
+
+	$("#closePopbox").bind("click",function(){
+		$(".popbox").css("display","none");
+	});
+
+	$("#playMode").click(function(){
+		if(playMode==1){
+			$(".playMode").css("background-position","0px -20px");
+			$(".playMode").attr("title","顺序播放");
+			setCookie("playMode","2",365);
+			playMode = 2;
+		}
+		else if(playMode==2){
+			$(".playMode").css("background-position","0px -40px");
+			$(".playMode").attr("title","随机播放");
+			setCookie("playMode","3",365);
+			playMode = 3;
+		}
+		else if(playMode==3){
+			$(".playMode").css("background-position","0px 0px");
+			$(".playMode").attr("title","单曲循环");
+			setCookie("playMode","1",365);
+			playMode = 1;
+		}
+		
+	});
+
+	var text = $("#songName").text();
+	if(text.length > 12){
+		size = 12;
+	}
+	else{
+		size = (17-Math.floor(text.length/3));
+	}
+
+	
+	$("#songName").css("font-size",  size +"px");
+
+
+		function bindHover(){
+			$(".C_content").hover(
+				function(){
+					var height = $(this).height();
+					$(this).prepend("<div class='C_contentBG'></div>");
+					$(this).prepend("<div class='hover_bar'></div>");
+					$(this).children(".hover_bar").height(height);
+					time = $(this).children("label.C_time").html();
+					$(this).children("label.C_time").html("<a id='reply' href='#'>回复他<img src='__PUBLIC__/img/reply.png'/></a>");
+					$("#reply").click(function(){
+		
+                   		firstComment = $(this).parent().parent().children(".C_text").children(".firstComment").text();
+                   		if(firstComment!=""){
+                   			toid = $(this).parent().prev(".C_text").children(".doubleComment").children(".toid").text();
+                   		}
+                   		else{
+                   			toid = $(this).parent().next(".C_id").text();
+                   		}
+                   		toNum = $(this).parent().next(".C_id").next(".number").text();
+
+						$("#commentText").trigger("focus");
+						$("#commentText")[0].value="回复【"+toNum+"】：";
+					});
+				},
+				function(){
+					$(this).children("label.C_time").html(time);
+					$(".hover_bar").remove();
+					$(".C_contentBG").remove();
+				}
+			);
+		}
+
+		$(".S_info:even").addClass("even");
+
+		if( $("#weibourl").attr("href")=='' ){
+			$("#weibologo").css("display","none");
+			$("#weibourl").click(function(){
+				return false;
+			});
+			$("#weibourl").attr("title","此人没有留下其微博哦");
+		}
+
+
+		$.getJSON("http://fmmusic.sinaapp.com/index.php/Index/commentlist/",
+			{ "sid":{$data.id} }, 
+			function(data){
+				var conmmentHtml = '';
+				for(var i in data.data){
+
+					if(data.data[i]['toid']==0){
+						conmmentHtml = conmmentHtml+"<div class='C_content'><div class='C_text'>"+data.data[i]['content']+"</div><label class='C_time'>"+data.data[i]['time']+"</label><label class='C_id'>"+data.data[i]['id']+"</label><label class='number'>"+data.data[i]['number']+"</label></div>";
+					}
+					else{
+                    	conmmentHtml = conmmentHtml+'<div class="C_content"><div class="C_text"><label class="firstComment">'+data.data[i]['content']+'</label><div class="doubleComment"><label class="toid">'+data.data[i]['toid']+'</label>'+data.data[i]['tocontent']+'</div></div><label class="C_time">'+data.data[i]['time']+'</label><label class="C_id">'+data.data[i]['id']+'</label><label class="number">'+data.data[i]['number']+'</label></div>';
+					}
+					
+				};
+				$(".C_list").prepend(conmmentHtml);
+				if(data.data!=null){
+					var len = data.data.length;
+				}
+				else{
+					var len = 0;
+				}
+				$("#comment_num").text(len);
+				bindHover();
+				$(".C_text:first").prepend("<label class='hotcomment'>【最热评论】</label><br/>");			
+			}
+		);
+
+		$("#submitBtn").bind("mousedown",function(){
+			 $(".sendBtn").css("background-position","0px -130px");
+		});
+		$("#submitBtn").bind("mouseup",function(){
+			 $(".sendBtn").css("background-position","0px 0px");
+		});
+		
+		$("#submitBtn").bind("click",function(){
+
+			commentTxt = $("#commentText")[0].value;
+			if(commentTxt.substr(0, 3)=="回复【"){
+				var reg = /【(\d+)(】：)([\s\S]+)/;
+				var commentData =  reg.exec(commentTxt);				
+				content = commentData[3];
+				if(firstComment!=''){
+
+					content =  content+ "//" + firstComment
+				}
+
+			}
+			else{
+				content = commentTxt;
+				toid = 0;
+			}
+
+			$.getJSON("http://fmmusic.sinaapp.com/index.php/Index/commentadd/",
+				{
+					"toid": toid,
+					"sid" : {$data.id},
+					"content" : content
+				},
+				function(data){
+					if(data.status==0){
+						var conmmentHtml = '';
+						for(var i in data.data){
+							if(data.data[i]['toid']==0){
+								conmmentHtml = conmmentHtml+"<div class='C_content'><div class='C_text'>"+data.data[i]['content']+"</div><label class='C_time'>"+data.data[i]['time']+"</label><label class='C_id'>"+data.data[i]['id']+"</label><label class='number'>"+data.data[i]['number']+"</label></div>";
+							}
+							else{
+
+			                   conmmentHtml = conmmentHtml+'<div class="C_content"><div class="C_text"><label class="firstComment">'+data.data[i]['content']+'</label><div class="doubleComment"><label class="toid">'+data.data[i]['toid']+'</label>'+data.data[i]['tocontent']+'</div></div><label class="C_time">'+data.data[i]['time']+'</label><label class="C_id">'+data.data[i]['di']+'</label><label class="number">'+data.data[i]['number']+'</label></div>';
+							}
+							
+						};
+						$(".C_list").empty();
+						$(".C_list").prepend(conmmentHtml);
+						$(".C_text:first").prepend("<label class='hotcomment'>【最热评论】</label><br/>");	
+						$("#commentText")[0].value = "在这里输入对歌手的说的话哦";
+						$("#submitBtn").attr("disabled","disabled").css("cursor", "auto");
+						$("#comment_num").text(data.data.length);
+						$(".sendBtn").css("background-position","0px 0px");
+						bindHover();
+					}				
+				}
+			);
+
+		});
+
+		$(window).resize(function() {
+			$(".C_list").height($(window).height()-130);
+			$(".playList").height($(window).height());
+		});
+		$(".C_list").height($(window).height()-130);
+		$(".playList").height($(window).height());
+
+		$("#commentText").focus(function(){
+			if($("#commentText")[0].value=="在这里输入对歌手的说的话哦"){
+				$("#commentText")[0].value="";
+			}			
+		});
+		$("#commentText").bind('input propertychange', function() {
+		    if($("#commentText")[0].value){
+				$(".sendBtn").css("background-position","0px -65px");
+				$("#submitBtn").removeAttr("disabled").css("cursor", "pointer");
+			}
+			else{
+				$(".sendBtn").css("background-position","0px 0px");
+				$("#submitBtn").attr("disabled","disabled").css("cursor", "auto");
+			}
+		});
+
+
+		$("#voteBtn").click(function(){
+             	$.getJSON("http://fmmusic.sinaapp.com/index.php/Vote/index/",
+				{ "sid": {$data.id} }, 
+				function(data){
+				switch (data.status){
+					case 1: 
+                          	VoCount++;                        
+                          	$("#likeCount").text(VoCount);
+							$(".voteBtn").css("background-position","0px 0px");
+							break;
+					case 2: 
+							$(".voteBtn").css("background-position","0px 0px");
+							$(".popbox").css("display","block");
+							break;
+					case 3: alert("微信id不存在");
+						break;
+					case 4: alert("网络请求错误");
+							break;
+                    case 5: alert("投票系统已经关闭");
+							break;
+					case 6: alert("歌曲不存在");
+							break;
+				}
+			});
+
+		});
+
+
+		$(".songListBtn").toggle(function(){
+			$(".playList").animate({left:"0px"});
+			$(".playListBG").animate({left:"0px"});
+			$("#bdshare").css("display","none");
+			$(this).css("background-position","0px 0px");
+		},
+		function(){
+			$(".playListBG").animate({left:"-130px"});
+			$(".playList").animate({left:"-130px"});
+			$("#bdshare").css("display","block");
+			$(this).css("background-position","0px -70px");
+		});
+
+		$(".S_info").hover(function(){
+			$(this).children(".S_name").css("width","100px");
+			$(this).append("<div class='triangle2'></div>"); 
+		},
+		function(){
+			$(".triangle2").remove();
+			$(this).children(".S_name").css("width","130px");
+		});
+
+		$("#downloadmp3").click(function(){
+			$.get("http://fmmusic.sinaapp.com/index.php/Index/add",
+				{
+					"id" : {$data.id} ,
+					"type" : "1"
+				},
+				function(){
+					DlCount++;
+					$("#downloadCount").text(DlCount);
+				}
+			);
+		});
+		
+	/*	$(".jp-play").click(function(){
+			$.get("http://fmmusic.sinaapp.com/index.php/Index/add",
+				{
+					"id" : {$data.id} ,
+					"type" : "2"
+				},
+				function(){
+					PlCount++;
+					$("#playCount").text(PlCount);
+				}
+			);
+		});*/
+		
+		$(".goWebsite").remove();
+
+		$(".P_info").hover(function(){
+			$(this).prepend("<div class='p_infoBG'></div>");
+		},
+		function(){
+			$(".p_infoBG").remove();
+		});
+		var num = $("#num").text();
+		num--;
+		$(".P_info").hover(function(){
+			$(this).prepend("<img id='playing' src='__PUBLIC__/img/playing.png'>");
+		},
+		function(){
+			$("#playing").remove();
+		});
+		
+		
+	});
+
+	function shunxu(type){
+          window.location="__URL__/shunxu?id={$data.id}&type="+type;
+    }
+
+
+    window.onload=function(){
+    	$(".playBtn").trigger("click");
+    	var t=setTimeout(function(){
+			$.get("http://fmmusic.sinaapp.com/index.php/Play/index",
+				{
+					"sid" : {$data.id}
+				},
+				function(){
+					PlCount++;
+					$("#playCount").text(PlCount);
+				}
+			);
+		},45000);
+
+       if(getCookie("playMode")==2){
+       		$(".playMode").css("background-position","0px -20px");
+       		$(".playMode").attr("title","顺序播放");
+       		playMode = 2;
+       }
+       else if(getCookie("playMode")==3){
+       		$(".playMode").css("background-position","0px -40px");
+       		$(".playMode").attr("title","随机播放");
+       		playMode = 3;
+       }
+       else {
+       		$(".playMode").css("background-position","0px 0px");
+       		$(".playMode").attr("title","单曲循环");
+       		playMode = 1;
+       		setCookie("playMode","1",365);
+       }
+    }
+
+	</script>
+</body>
+</html>

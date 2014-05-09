@@ -1,0 +1,123 @@
+<html>
+       
+	<head>
+              
+ 
+		<meta http-equiv="content-type" content="text/html charset=utf-8">
+		<title>modify</title>	
+		
+		<load href="/Public/css/bootstrap.css" />  
+		<load href="/Public/css/bootstrap-responsive.css" /> 
+      
+	</head>
+
+	<body>
+		<form action="__URL__/update" method='post'>
+		<input type='hidden' name="id" value="{$data.id}" />
+		
+		
+		
+		
+		 <div class="control-group warning">
+           <label class="control-label" for="inputWarning">选手编号</label>
+              <div class="controls">
+             <input type="text" id="inputWarning" name='no' value="{$data.no}" />
+           
+          </div>
+              </div>
+			  
+			  </br>
+			  
+		<div class="control-group error">
+          <label class="control-label" for="inputError">选手姓名</label>
+              <div class="controls">
+             <input type="text" id="inputError" name='name' value="{$data.name}" >
+             
+              </div>
+          </div>
+		  
+          </br>
+		  
+		  <div class="control-group info">
+               <label class="control-label" for="inputInfo">歌名</label>
+                    <div class="controls">
+                <input type="text" id="inputInfo" name='song_name' value="{$data.song_name}">
+                 
+                </div>
+              </div>
+			  
+                 </br>
+				 
+				  <div class="control-group warning">
+           <label class="control-label" for="inputWarning">歌曲url</label>
+              <div class="controls">
+             <input type="text" id="inputWarning" name='song_url' value="{$song_url}" />
+           
+          </div>
+              </div>  
+			  </br>
+			  
+			          <div class="control-group info">
+               <label class="control-label" for="inputInfo">原唱</label>
+                    <div class="controls">
+                <input type="text" id="inputInfo" name='singer' value="{$data.singer}">     
+                </div>
+              </div>
+			  
+                 </br>			
+				 
+			  
+				<div class="control-group error">
+          <label class="control-label" for="inputError">照片url</label>
+              <div class="controls">
+             <input type="text" id="inputError" name='imgurl' value="{$data.imgurl}" >
+             
+              </div>
+          </div>  
+          </br>  
+			
+                  <div class="control-group info">
+               <label class="control-label" for="inputInfo">票数</label>
+                    <div class="controls">
+                <input type="text" id="inputInfo" name='vote_count' value="{$data.vote_count}">     
+                </div>
+              </div>
+			  
+                 </br>			
+				 
+				 		  <div class="control-group warning">
+           <label class="control-label" for="inputWarning">试听次数</label>
+              <div class="controls">
+             <input type="text" id="inputWarning" name='view_count' value="{$data.view_count}" />
+           
+          </div>
+              </div>  
+			  </br>
+			  
+				<div class="control-group error">
+          <label class="control-label" for="inputError">下载次数</label>
+              <div class="controls">
+             <input type="text" id="inputError" name='dl_count' value="{$data.dl_count}" >
+             
+              </div>
+          </div>  
+          </br>  
+			
+                  <div class="control-group info">
+               <label class="control-label" for="inputInfo">播放次数</label>
+                    <div class="controls">
+                <input type="text" id="inputInfo" name='play_count' value="{$data.play_count}">     
+                </div>
+              </div>
+			  
+                 </br>			
+              <input type='submit' value='确认提交' class="btn btn-success">
+		
+	    </form>
+		
+		</br></br>
+             <a href="__URL__/index">返回上一页</a>
+	</body>
+
+</html>
+

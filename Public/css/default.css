@@ -1,0 +1,396 @@
+::-webkit-scrollbar-track-piece {
+	background-color:#1c1413;
+	border-left:1px solid #1c1413;
+	border-left:1px solid #1c1413;
+	border-radius: 15px;
+}
+::-webkit-scrollbar {
+	width:9px;
+	height:6px;
+}
+::-webkit-scrollbar-thumb {
+	background-color:#b1afaf;
+	background-clip:padding-box;
+	border:1px solid #979797;
+	min-height:28px;
+	border-radius: 15px;
+}
+::-webkit-scrollbar-thumb:hover {
+	border:1px solid #636363;
+	background-color:#929292;
+}
+html{
+	width: 100%;
+	height: 100%;
+}
+body{
+	margin: 0px;
+	background: url("../img/BGimg2.jpg") no-repeat;
+	background-position:center;
+	background-attachment:fixed;
+	position: relative;
+	overflow: hidden;
+	background-size: cover;
+	font-family: "微软雅黑";
+	vertical-align: baseline;
+	display: block;
+	margin: auto;
+	padding: 0;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+}
+img{
+	border:none;
+}
+input{
+	outline: none;
+}
+.container{
+	width: 100%;
+	min-width: 600px;
+	float: left;
+	margin: 0px auto;
+}
+.topbar{
+	height: 80px;
+	width: 330px;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	padding-top: 50px;
+	right: 50px;
+}
+.logo{
+	width: 100px;
+	display: inline-block;
+	position: relative;
+	top: 10px;
+}
+.logoChild{
+	width: 200px;
+	margin-left: 10px;
+}
+a{
+	text-decoration: none;
+}
+
+.logo:hover{
+transform: rotate(360deg);
+-ms-transform: rotate(360deg);
+-webkit-transform: rotate(360deg);
+-o-transform: rotate(360deg);
+-moz-transform: rotate(360deg);
+transition-duration: 1s;
+-moz-transition-duration: 1s;
+-webkit-transition-duration: 1s;
+-o-transition-duration: 1s;
+}
+
+.content{
+	width: 700px;
+	margin: 50px auto;
+}
+.search{
+	margin-bottom: 30px;
+	position: relative;
+}
+#searchText{
+	float: left;
+	width: 340px;
+	height: 20px;
+	font-size: 22px;
+	padding: 10px;
+	color: #b6b6b6;
+	display: inline-block;
+	margin-right: 10px;
+	border: none;
+	padding-left: 0px;
+	position: relative;
+	top: 13px;
+	left: 5px;
+}
+#searchIcon{
+	float: left;
+	width: 40px;
+	height: 40px;
+	position: relative;
+	top: 13px;
+	left: 5px;
+	margin-left: 25px;
+}
+.searchBtn{
+	width: 100px;
+	height: 33px;
+	padding-top: 10px;
+	background: url("../img/Btn.png")0px -44px no-repeat;
+	margin: 10px;
+	display: inline-block;
+	font-size: 18px;
+}
+.searchBtn:hover{
+	background-position: 0px 0px;
+}
+.randomBtn{
+	width: 100px;
+	height: 33px;
+	padding-top: 10px;
+	background: url("../img/Btn.png")-100px -44px no-repeat;
+	margin: 10px;
+	display: inline-block;
+	font-size: 18px;
+}
+.randomBtn:hover{
+	background-position:  -100px 0px;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+.hot,.new{
+	width: 300px;
+	display: inline-block;
+	height: 220px;
+	margin-right: 15px;
+	margin-left: 25px;
+	text-align: left;
+	float: left;
+	border: 1px #343233 solid;
+	border-radius: 2px;
+}
+.hotBG,.newBG{
+	width: 300px;
+	height: 220px;
+	position: absolute;
+	z-index: -1;
+	background: #000;
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	opacity:0.5;
+	display: inline-block;
+	border-radius: 2px;
+	border:1px #000 solid;
+}
+.titleBar{
+	border-bottom: 2px solid #2a2a29;
+	padding: 5px;
+	font-size: 19px;
+	margin: 5px 10px 5px 10px; 
+}
+.titleBar img{
+	width: 20px;
+	height: 20px;
+	position: relative;
+	top: 2px;
+}
+.top{
+	color: #fff;
+}
+.top label{
+	display: inline-block;
+	margin-left: 5px;
+	margin-top: 3px;
+	cursor: pointer;
+	padding-top: 0px;
+	height: 25px;
+	white-space: nowrap;
+}
+
+#newSong{
+	color: #abd69d;
+}
+#hotSong{
+	color: #d79e9e;
+}
+.num{
+	width: 30px;
+	margin-left: 5px !important;
+}
+.singerName{
+	width: 65px;
+	text-align: center;
+}
+.songName{
+	width: 130px;
+}
+.songInfo{
+	width: 270px;
+	margin-left: 15px;
+	padding-bottom: 2px;
+}
+.songInfoBG{
+	width: 270px;
+	height: 26px;
+	padding-bottom: 2px;
+	background: #fff;
+	filter:alpha(opacity=10);
+	-moz-opacity:0.1;
+	opacity:0.1;
+	position: absolute;
+	z-index: 2;
+}
+.popBoard{
+	position: absolute;
+	width: 100%;
+	height: 650px;
+	top: 0px;
+	display: none;
+}
+.popBoardBG{
+	position: absolute;
+	width: 100%;
+	height: 650px;
+	top: 0px;
+	background: #000;
+	filter:alpha(opacity=45);
+	-moz-opacity:0.45;
+	opacity:0.45;
+}
+.S_result{
+	width: 420px;
+	height: 450px;
+	color: #fff;
+	position: absolute;
+	top: 100px;
+	left: 50%;
+	margin-left: -210px;
+	z-index: 10;
+	text-align: left;
+	font-size: 18px;
+}
+.S_resultBG{
+	width: 420px;
+	height: 450px;
+	background: #000;
+	filter:alpha(opacity=85);
+	-moz-opacity:0.85;
+	opacity:0.85;
+	position: absolute;
+	z-index: -1;
+}
+.S_title{
+	padding: 5px;
+	border-bottom: 2px solid #fff; 
+	margin: 5px 15px;
+}
+.S_num_H,.S_singerName_H,.S_songName_H{
+	display: inline-block;
+	background: #4f4e4d;
+	height: 22px;
+	padding: 5px;
+	color: #000;
+	text-align: center;
+	margin: 10px 5px;
+}
+.S_num_H{
+	width: 50px;
+	margin-left: 25px;
+}
+.S_singerName_H{
+	width: 60px;
+}
+.S_songName_H{
+	width: 190px;
+}
+label{
+	display: inline-block;
+	padding-top: 5px;
+	overflow: hidden;
+}
+.S_songInfo{
+	padding: 5px;
+	width: 350px;
+	margin-left: 20px;
+	cursor: pointer;
+}
+
+.S_num{
+	width: 50px;
+	text-align: center;
+	margin-left: 5px;
+}
+.S_singerName{
+	width: 80px;
+	text-align: center;
+}
+.S_songName{
+	width: 200px;
+	text-align: center;
+}
+.hoveringBar{
+	width: 10px;
+	background: #f5813a;
+	height: 34px;
+	display: inline-block;
+	float: left;
+	position: absolute;
+}
+.S_songInfoBG{
+	position: absolute;
+	width: 360px;
+	height: 34px;
+	z-index: -1;
+	background: #fff;
+	filter:alpha(opacity=10);
+	-moz-opacity:0.1;
+	opacity:0.1;
+}
+#closeBtn{
+	position: absolute;
+	top: 15px;
+	right: 20px;
+	color: #dbdada;
+	cursor: pointer;
+}
+#closeBtn:hover{
+	color: #fff;
+}
+#searchLength{
+	position: relative;
+	top: 5px
+}
+.nofind{
+	display: none;
+	text-align: center;
+	font-size: 25px;
+	margin-top: 100px;
+}
+.join{
+	font-size: 17px;
+	position: relative;
+	top: -30px;
+	left: 340px;
+	color: #bcbcbc;
+	width: 90px;
+	height: 30px;
+	line-height: 30px;
+}
+.join:hover{
+	color: #ffd87c;
+}
+.joinBG{
+	background: #000;
+	filter:alpha(opacity=20);
+	-moz-opacity:0.2;
+	opacity:0.2;
+	border-radius: 5px;
+	width: 90px;
+	height: 30px;
+	position: absolute;
+}
+.joinBG:hover{
+	filter:alpha(opacity=40);
+	-moz-opacity:0.4;
+	opacity:0.4;
+}
+.footer {
+	font-size: 14px;
+	color: #363636;
+	cursor: default;
+    margin: 350px auto;
+    width: 360px;
+}
+.footer:hover{
+	color: #e7e7e7;
+	transition: all 1.5s ease-out 0s;
+}

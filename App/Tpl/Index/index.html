@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html  xmlns:wb="http://open.weibo.com/wb">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta name="KEYWords" content="暨大星球杯网上歌唱比赛决赛"/>
+	<meta name='description' content='暨南大学的线上歌唱大赛决赛 由暨南FM工作室主办'/>
+	<meta name="author" content="JnuFM studio"/> 
+	<meta name="viewport"  content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+	<meta name="Robots" contect="all">
+	<meta name="revisit-after" content="1 days"> 
+	<title>【星球杯网络歌唱大赛决赛】{$data.name}-{$data.song_name}</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/finalsindex.css" />
+    <link rel="shortcut icon" href="__PUBLIC__/img/finals/icon.jpg" type="image/x-icon" sizes="16x16"/>
+</head>
+					<!-----------------------------------------------------------------------------------
+					_____________________________________________________________________________________
+					|                                                                                   |
+					|                           暨南FM工作室技术岗实习生招聘启事                        |
+					|                                                                                   |
+					|    【招聘岗位】                                                                   |
+					|                                                                                   |
+					|                    -后台研发工程师     2人                                        |
+					|        开发类-     -应用研发工程师     2人                                        |
+					|                    -网页前端工程师     1人                                        |
+					|                    -测试开发工程师     1人                                        |
+					|                                                                                   |
+					|                    -视觉设计师         1人                                        |
+					|        设计类-     -交互设计师         1人                                        |
+					|                    -UI设计师           1人                                        |
+					|                                                                                   |
+					|        业务类-     -产品狗             1人                                        |
+					|                                                                                   |
+					|                                                                                   |
+					|    【团队介绍】                                                                   |
+					|                                                                                   |
+					|       暨南FM工作室成立于2012年，是一个完全独立的校内民间技术团队，我们致力于      |
+					|     打造出最完美的产品并服务于广大暨南学子。现在已经受到了校方的大力支持，拥      |
+					|     有部分学校服务器资源，同时在校内外都拥有独立的工作室。目前暨南FM旗下的产      |
+					|     品有"暨南FM"微信公众账号和"暨大榕树"新浪微博树洞等。还有更多产品正在研发      |
+					|     中。如果你和我们拥有一样的目标和理念，并且你也热爱互联网事业，请加入我们！    |
+					|                                                                                   |
+					|                                                                                   |
+					|    【应聘须知】                                                                   |
+					|                                                                                   |
+					|       应聘者将会有为期一个月的实习期，请有意应聘者发个人简历至hr@jnu.fm。         |
+					|                                                                                   |
+					|                                                                                   |
+					|                                                                   暨南FM工作室    |
+					|                                                                   2013年11月1日   |
+					|___________________________________________________________________________________|
+					 ------------------------------------------------------------------------------------>
+
+<body scroll="no">
+	<div class="container">
+		<div class="CDlogo"></div>
+		<div class="songBoard">
+			<div class="return"><a href="http://fmmusic.sinaapp.com"><img src="__PUBLIC__/img/finals/return.jpg"></a></div>
+			<div class="share">分享<wb:share-button id="shareBtn" addition="simple" type="button" pic="http%3A%2F%2F2.fmmusic.sinaapp.com%2FPublic%2Fimg%2Ffinals%2Fstarlogo.jpg||http%3A%2F%2F2.fmmusic.sinaapp.com%2FPublic%2Fimg%2Ffinals%2Ftitle.png" picture_search="false"></wb:share-button></div>
+			<div class="CD">
+				<img id="img" src="{$data.avatar}">
+				<img id="cd" src="__PUBLIC__/img/finals/CD.png">
+				
+				<div class="vote">
+					<img src="__PUBLIC__/img/finals/like.png">
+					票数
+					<div class="votenum">{$data.vote_count}</div>
+				</div>
+			</div>
+			<a href="javascript:;" >
+				<div class="next" onclick="shunxu(1)" >下一曲</div>
+			</a>  
+			<a href="javascript:;" >
+				<div class="last" onclick="shunxu(2)">上一曲</div>
+			</a>
+			<div class="CDtitle">
+				<div class="songName"><img src="__PUBLIC__/img/finals/songname.jpg" ><label id="songname">{$data.song_name}</label></div>
+				<div class="singerName"><img src="__PUBLIC__/img/finals/singername.jpg">{$data.name}</div>
+			
+				<div class="intro">&nbsp;&nbsp;{$data.summary}</div>
+			</div>
+			<div class="player">
+
+				<div id="jquery_jplayer_1" ></div>
+				<div id ="jp_container_1" >	
+					<div class="jp-progress">
+		                <div class="jp-seek-bar">
+		                    <div class="jp-play-bar"></div>
+		                </div>
+		            </div>
+		            <div class="jp-current-time"></div>
+		            <div class="jp-duration"></div>
+					<a class="jp-play" href="javascript:;" tabindex="1"><div class="playBtn"></div></a>	    
+					<a href="javascript:;" class="jp-pause" tabindex="1"><div class="pauseBtn"></div></a>	    
+				</div>
+				
+				<div class="voteBtn"></div>
+
+				<div class="mode2Btn"></div>
+
+			</div>
+			<div class="footer">Copyright © 2013 All Right Reserved JnuFM Studio</div>
+		</div>
+
+		<div class="commentBoard">
+			<div class="guide">
+				<div class="guidebox" id="songtext_guidebox">
+					<div id="songtext" class="guideBoxBG"></div>
+					歌词
+				</div>
+				<div class="guidebox" id="comment_guidebox">
+					<div id="comment" class="guideBoxBG"></div>
+					评论
+				</div>
+				<div class="commentnum">0</div>
+			</div>
+
+			<div class="songtext">
+				
+				<div class="lyrics dumascroll" >
+				
+					{$data.lrc}
+			
+				</div>
+
+				<div class="songinfo">
+					<div class="songinfoBG"></div>
+					<div class="S_songname">{$data.song_name}</div>
+					<div class="S_singer">原唱：{$data.singer}</div>
+					
+				</div>
+			</div>
+
+			<div class="commentList">
+				<div class="Clist dumascroll">
+				<foreach name="comment" item="comment">
+					<div class="C_content">
+					<div class="C_contentBG"></div>
+					<div class="C_text">{$comment.content}</div>
+					<br/>
+					</div>
+				</foreach>	
+			</div>
+			<div class="send">
+				<div class="sendBG"></div>
+				<textarea name="content" id="commentText"></textarea>
+				<div class="submit"></div>
+				<button id="submitBtn" type="submit" value="发送" disabled="disabled"/>
+			</div>
+
+		</div>
+	</div>
+<script src="http://cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/jQueryRotate.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/finalsindex.js"></script>
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+
+$(function(){
+	songid = {$data.id};
+	VoCount = $(".votenum").text();
+	$("#jquery_jplayer_1").jPlayer({
+        ready: function (){
+            $(this).jPlayer("setMedia", {
+                mp3:"{$data.song_url}"
+            }).jPlayer("play");
+        },
+        swfPath: "js",
+        supplied: "mp3",
+        wmode: "window",
+        smoothPlayBar: true,
+        keyEnabled: true,
+        ended: function (event){
+        	if(playMode=="random"){
+        		randomid = Math.floor(Math.random()*10+1);
+        		while (randomid==songid) {
+        			randomid = Math.floor(Math.random()*10+1);
+        		};
+        		location.href = "http://fmmusic.sinaapp.com/?id="+randomid;
+        	}
+        	else{
+        		$(this).jPlayer("play");
+				$.get("http://fmmusic.sinaapp.com/index.php/Play/index",{	"sid" : {$data.id}});
+        	}
+        },
+        cssSelectorAncestor: '#jp_container_1',
+		cssSelector: {
+			currentTime: '.jp-current-time',
+		},
+    });
+
+
+
+	$(".voteBtn").click(function(){
+		$.getJSON("http://fmmusic.sinaapp.com/index.php/Vote/index/",
+			{ "sid": {$data.id} }, 
+			function(data){
+			switch (data.status){
+				case 1: 
+                      	VoCount++;                        
+						$(".voteBtn").removeClass().addClass("voteedBtn");		
+						$(".votenum").text(VoCount);	
+						break;
+				case 2: 
+						alert("今日已经投过票了");
+						break;
+				case 3: alert("微信id不存在");
+					break;
+				case 4: alert("网络请求错误");
+						break;
+                case 5: alert("投票系统已经关闭");
+						break;
+				case 6: alert("歌曲不存在");
+						break;
+			}
+		});
+   	});
+
+   	$("#submitBtn").bind("click",function(){
+		commentTxt = $("#commentText")[0].value;
+		$.getJSON("http://fmmusic.sinaapp.com/index.php/Index/commentadd/",
+			{
+				"sid" : {$data.id},
+				"content" : commentTxt
+			},
+			function(data){
+				content = '<div class="C_content"><div class="C_contentBG"></div><div class="C_text">'+commentTxt+'</div></div>';
+				$(".Clist").children().prepend(content);
+				$("#commentText")[0].value = "";
+				$("#comment_num").text(data.data.length);
+				$(".submit").css("background-position","0px -55px");
+				$("#submitBtn").attr("disabled","disabled").css("cursor", "auto");
+				$(".dumascroll_bar").remove();
+				$(".dumascroll_area").each(function(){
+					scrollContent = $(this).html();
+					parent = $(this).parent();
+					$(this).remove();
+					parent.html(scrollContent);
+				});	
+				duma.BeautifyScrollBar.init();
+			}				
+		);
+	});
+
+	$("#commentText").bind('input propertychange', function() {
+	    if($("#commentText")[0].value){
+			$(".submit").css("background-position","0px 0px");
+			$("#submitBtn").removeAttr("disabled").css("cursor", "pointer");
+		}
+		else{
+			$(".submit").css("background-position","0px -55px");
+			$("#submitBtn").attr("disabled","disabled").css("cursor", "auto");
+		}
+	});
+
+	
+
+});
+
+	
+</script>
+
+<script type="text/javascript">
+ window.onload=function(){
+	if(getCookie("playMode")=="random"){
+		$(".mode2Btn").removeClass().addClass("modebtn");
+		playMode = "random";
+	}
+	else{
+
+		playMode = "circle";
+	}
+	$(".playBtn").trigger("click");
+	$(".commentnum").text($(".C_content").size());	
+	var lrc = $(".lyrics").children(".dumascroll_area").text().replace(/^\s+/g,"");
+	$(".lyrics").children(".dumascroll_area").text(lrc);
+	$("#dumaScrollAreaId_35Bar").css("display","none");
+}
+ function shunxu(type){
+ 	var songid = {$data.id};
+ 	console.log(songid);
+ 	if(type==1){
+ 		songid++;
+ 		if(songid==11){
+ 			songid = 1;
+ 		}
+ 	}
+ 	else if(type==2){
+ 		songid--;
+ 		if(songid==0){
+ 			songid = 10;
+ 		}
+ 	}
+    window.location="http://fmmusic.sinaapp.com/?id="+songid;
+}
+</script>
+
+
+</body>
+</html>
+
+
+
+
+

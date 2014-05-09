@@ -1,0 +1,531 @@
+html{
+	width: 100%;
+}
+body{
+	margin: 0;
+	background: #050a11 url(../img/finals/BG.jpg) no-repeat;
+	width: 100%;
+	background-size:100%;
+	font-family: '微软雅黑';
+	color: #fff;
+	overflow-x: hidden;
+}
+img{
+	border:none;
+}
+.container{
+	width: 1024px;
+	margin: 0 auto;
+	clear: both;
+}
+.title{
+	width:450px;
+	height: 360px;
+	margin: 0 auto;
+	position: relative;
+}
+.title img{
+	width:450px;
+	height: 360px;
+}
+.singerBoard{
+	margin-top: 20px;
+}
+.titlebar{
+	width: 974px;
+	height: 35px;
+	line-height: 35px;
+    filter:alpha(opacity=100 finishopacity=0 style=1 startx=0,starty=0,finishx=900,finishy=0) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#ae1f24,endcolorstr=#ae1f24,gradientType=1);
+    -ms-filter:alpha(opacity=100 finishopacity=0 style=1 startx=0,starty=0,finishx=900,finishy=0) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#ae1f24,endcolorstr=#ae1f24,gradientType=1);
+    background:#ae1f24; 
+    background:-moz-linear-gradient(left, rgba(174, 31, 36, 1), rgba(174, 31, 36, 0));  
+    background:-webkit-gradient(linear,left center,right center, from(rgba(174, 31, 36, 1)), to(rgba(174, 31, 36, 0)));  
+    background:-o-linear-gradient(left, rgba(174, 31, 36, 1), rgba(174, 31, 36, 0)); 
+	font-size: 20px;
+	padding-left: 50px;	
+}
+.content{
+	border-top: #0d0d20 5px solid;
+	border-bottom: #0d0d20 5px solid;
+	width: 100%;
+	padding-top: 30px;
+	padding-bottom: 10px;
+	position: relative;
+	clear: both;
+	overflow: auto;
+}
+.contentBG{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: black;
+	filter:alpha(opacity=35);
+	-moz-opacity:0.35; 
+	opacity:0.35;
+	z-index: -1;
+}
+.singerInfo{
+	width: 150px;
+	height: 200px;
+	border: #373440 5px solid;
+	display: inline-block;
+	float: left;
+	margin-left: 35px;
+	margin-bottom: 20px;
+	background: #0b0a17;
+	cursor: pointer;
+	position: relative;
+}
+.singerInfo:hover{
+	border: #4a4f81 5px solid;
+}
+.photo{
+	width: 150px;
+	height: 150px;
+}
+.slidebox{
+	width: 150px;
+	height: 0px;
+	position: absolute;
+	top: 150px;
+	display: none;
+}
+.playbtn,.weibobtn{
+	width: 40px;height: 40px;
+	position: absolute;
+	z-index: 999;
+	top: 150px;
+}
+.playbtn{
+	left: 20px;
+}
+.weibobtn{
+	left: 75px;
+}
+.slideboxBG{
+	width: 150px;
+	height: 100%;
+	background: black;
+	filter:alpha(opacity=60);
+	-moz-opacity:0.6; 
+	opacity:0.6;
+	position: absolute;
+}
+.singerName{
+	float: left;
+	color: #f26a6a;
+	margin-left: 10px;
+	font-size: 17px;
+}
+.voteNum{
+	border-radius: 8px;
+	background: #f26a6a;
+	height: 20px;
+	float: left;
+	margin-left: 10px;
+	line-height: 19px;
+	padding-left: 7px;
+	padding-right: 7px;
+	margin-top: 3px;
+	margin-bottom: 1px;
+}
+.voteNum img{
+	width: 12px;
+	height: 12px;
+	margin-right: 3px;
+}
+.songName{
+	margin-left: 10px;
+	font-size: 14px;
+	float: left;
+	position: absolute;
+}
+.numlabel{
+	width: 40px;
+	height: 25px;
+	background: #e3494a;
+	position: absolute;
+	top: 20px;
+	left: -20px;
+	text-align: center;
+	z-index: 999;
+}
+.numlabeltriangle{
+	border-color:  #611d1d  #611d1d transparent transparent;
+	border-style: solid;
+	border-width: 8px; 
+	font-size: 0;
+	height: 0;
+	line-height: 0;
+	position: absolute;
+	top: 45px;
+	left: -20px;
+}
+li a,li a:visited{
+	text-decoration: none;
+	color: white;
+}
+li a:hover{
+	color:rgb(227,117,50);
+}
+li{
+	display: none;
+}
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.review{
+	margin-top: 70px;
+	width: 300px;
+	height: 400px;
+	float: left;
+	margin-right: 100px;
+	position: relative;
+}
+#placeright{
+	margin-right: 0px;
+	margin-left: 100px;
+}
+.reviewtopbar{
+	width: 280px;
+	height: 35px;
+	line-height: 35px;
+    filter:alpha(opacity=100 finishopacity=0 style=1 startx=0,starty=0,finishx=300,finishy=0) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#e37532,endcolorstr=#e37532,gradientType=1);
+    -ms-filter:alpha(opacity=100 finishopacity=0 style=1 startx=0,starty=0,finishx=300,finishy=0) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#e37532,endcolorstr=#e37532,gradientType=1);
+    background:#e37532; 
+    background:-moz-linear-gradient(left, rgba(227, 117, 50, 1), rgba(227, 117, 50, 0));  
+    background:-webkit-gradient(linear,left center,right center, from(rgba(227, 117, 50, 1)), to(rgba(227, 117, 50, 0)));  
+    background:-o-linear-gradient(left, rgba(227, 117, 50, 1), rgba(227, 117, 50, 0)); 
+	font-size: 20px;
+	padding-left: 20px;	
+}
+.songlist{
+	position: relative;
+}
+#first{
+
+}
+.Rnum{
+	float: left;
+	color: #1a173d;
+	width: 25px;
+	height: 25px;
+	margin-top: 10px;
+	margin-left: 10px;
+	line-height: 25px;
+	text-align: center;
+	background: url(../img/finals/circle.png) no-repeat;
+}
+.Rnum img{
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	top:10px;
+	left: 10px;
+	z-index: -1;
+
+}
+.Rsingername{
+	float: left;
+	width: 80px;
+	text-align: center;
+}
+.Rsongname{
+	color: #ffc6d3;
+}
+li{
+	width: 300px;
+	height: 45px;
+	line-height: 45px;
+	position: relative;
+	cursor: pointer;
+}
+.liBGblack{
+	width: 300px;
+	height: 45px;
+	position: absolute;
+	z-index: -1;
+	background: black;
+	filter:alpha(opacity=35);
+	-moz-opacity:0.35; 
+	opacity:0.35;
+}
+.liBGwhite{
+	width: 300px;
+	height: 45px;
+	position: absolute;
+	z-index: -1;
+	background: white;
+	filter:alpha(opacity=12);
+	-moz-opacity:0.12; 
+	opacity:0.12;
+}
+.pager{
+	width: 0px;
+	height: 90px;
+	position:absolute;
+	top: 0px;
+	right: 300px;
+}
+.up{
+	width: 100%;
+	height: 45px;
+	background: #6d1258;
+	cursor: pointer;
+}
+.down{
+	width: 100%;
+	height: 45px;
+	background: #2f27a1;
+	cursor: pointer;
+}
+.playthis{
+	width: 45px;
+	height: 45px;
+	background: #e37532;
+	position: absolute;
+	left: 300px;
+	top: 0;
+	cursor: pointer;
+}
+.upicon{
+	width: 100%;
+	height: 45px;
+	background: url(../img/finals/songlist.png) no-repeat;
+}
+.downicon{
+	width: 100%;
+	height: 45px;
+	background: url(../img/finals/songlist.png) no-repeat;
+	background-position: 0px -45px;
+}
+.playicon{
+	width: 100%;
+	height: 45px;
+	background: url(../img/finals/songlist.png) no-repeat;
+	background-position: 0px -90px;
+}
+.video{
+	width: 620px;
+	height: 400px;
+	float: left;
+	margin-top: 70px;
+	position: relative;
+}
+.videotopbar{
+	width:620px;
+	height: 35px;
+	line-height: 35px;
+    filter:alpha(opacity=100 finishopacity=0 style=1 startx=0,starty=0,finishx=300,finishy=0) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#e37532,endcolorstr=#e37532,gradientType=1);
+    -ms-filter:alpha(opacity=100 finishopacity=0 style=1 startx=0,starty=0,finishx=300,finishy=0) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#e37532,endcolorstr=#e37532,gradientType=1);
+    background:#e37532; 
+    background:-moz-linear-gradient(left, rgba(227, 117, 50, 1), rgba(227, 117, 50, 0));  
+    background:-webkit-gradient(linear,left center,right center, from(rgba(227, 117, 50, 1)), to(rgba(227, 117, 50, 0)));  
+    background:-o-linear-gradient(left, rgba(227, 117, 50, 1), rgba(227, 117, 50, 0)); 
+	font-size: 20px;
+	padding-left: 20px;	
+}
+.lastvideotopbar{
+	width:620px;
+	height: 35px;
+	line-height: 35px;
+    filter:alpha(opacity=100 finishopacity=0 style=1 startx=0,starty=0,finishx=300,finishy=0) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#329ae3,endcolorstr=#329ae3,gradientType=1);
+    -ms-filter:alpha(opacity=100 finishopacity=0 style=1 startx=0,starty=0,finishx=300,finishy=0) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#329ae3,endcolorstr=#329ae3,gradientType=1);
+    background:#329ae3; 
+    background:-moz-linear-gradient(left, rgba(50, 157, 224, 1), rgba(50, 157, 224, 0));  
+    background:-webkit-gradient(linear,left center,right center, from(rgba(50, 157, 224, 1)), to(rgba(50, 157, 224, 0)));  
+    background:-o-linear-gradient(left, rgba(50, 157, 224, 1), rgba(50, 157, 224, 0)); 
+	font-size: 20px;
+	padding-left: 20px;	
+}
+.videoBG{
+	background: #141135;
+	filter:alpha(opacity=70);
+	-moz-opacity:0.70; 
+	opacity:0.70;
+	position: absolute;
+	width: 620px;
+	height: 400px;
+	z-index: -1;
+	top: 0;
+}
+.lastvideoBG{
+	background: #113148;
+	filter:alpha(opacity=22);
+	-moz-opacity:0.22; 
+	opacity:0.22;
+	position: absolute;
+	width: 620px;
+	height: 400px;
+	z-index: -1;
+	top: 0;
+}
+.videourl{
+	margin-top: 7px;
+	margin-left: 10px;
+}
+.card{
+	width: 400px;
+	height: 150px;
+	background: #10476e;
+}
+#code2d{
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	background: url(../img/finals/code2d.jpg) no-repeat;
+	background-size: 100%;
+	filter:alpha(opacity=0);
+	-moz-opacity:0; 
+	opacity:0;
+}
+#logo{
+	width: 150px;
+	height: 150px;
+	float: left;
+	margin-right: 15px;
+}
+.footer{
+	width: 1024px;
+	height: 300px;
+	float: left;
+}
+.footertitle{
+	font-size: 30px;
+	color: #9dd6ff;
+	height: 50px;
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+.F_title{
+	color: #d7eeff;
+	font-size: 22px;
+	line-height: 40px;
+}
+.F_text{
+	color: #9dd6ff;
+	font-size: 17px;
+}
+.footerbtn{
+	width: 40px;
+	height: 40px;
+	float: right;
+	margin-top: 15px;
+	margin-right: 10px;
+}
+#footertitle2{
+	color: #ff7c94;
+}
+.logos{
+	width: 150px;
+	height: 150px;
+	background: url(../img/finals/logos.jpg);
+	float: left;
+	margin-right: 15px;
+}
+#Jnuren{
+	background-position: 0px 0px;
+}
+#cijiao{
+	background-position: -150px 0px;
+}
+#wei{
+	background-position:  0px -150px;
+}
+#duomi{
+	background-position:  -150px -150px;
+}
+#duomicard,#weicard ,#cijiaocard ,#Jnurencard {
+	float: left;
+	margin-right: 50px;
+	margin-bottom: 50px;
+	color: #fff;
+}
+#duomicard{
+	background:#da5818;
+}
+#weicard {
+	background:#d4c439;
+}
+#cijiaocard {
+	background:#757575;
+}
+#Jnurencard{
+	background:#66091a;
+}
+.empty{
+	height: 100px;
+	float: left;
+	width: 800px;
+}
+#duomiTitle{color: #fefefe ;}
+#duomiText{color: #ffcbb2 ;}
+#cijiaoTitle{color: #fff ;}
+#cijiaoText{color: #d0d0d0 ;}
+#JnurenTitle{color: #ffd7d7 ;}
+#Jnurentext{color: #ff9d9d ;}
+#weiTitle{color: #ffffd7 ;}
+#weitext{color: #fff5a0 ;}
+
+.introtopbar{
+	width: 280px;
+	height: 35px;
+	line-height: 35px;
+    filter:alpha(opacity=100 finishopacity=0 style=1 startx=0,starty=0,finishx=300,finishy=0) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#329ae3,endcolorstr=#329ae3,gradientType=1);
+    -ms-filter:alpha(opacity=100 finishopacity=0 style=1 startx=0,starty=0,finishx=300,finishy=0) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#329ae3,endcolorstr=#329ae3,gradientType=1);
+    background:#329ae3; 
+    background:-moz-linear-gradient(left, rgba(50, 157, 224, 1), rgba(50, 157, 224, 0));  
+    background:-webkit-gradient(linear,left center,right center, from(rgba(50, 157, 224, 1)), to(rgba(50, 157, 224, 0)));  
+    background:-o-linear-gradient(left, rgba(50, 157, 224, 1), rgba(50, 157, 224, 0)); 
+	font-size: 20px;
+	padding-left: 20px;	
+}
+#starlogo{
+	width: 300px;
+}
+.introinfo{
+	position: absolute;
+	top: 240px;
+	color: #fbffc9;
+}
+#fmlogo{
+	float: right;
+	margin-top: 20px;
+
+}
+.all{
+	text-align: right;
+	width: 300px;
+	margin-top: 140px;
+}
+.team{
+	font-size: 22px;
+	color: #fff;
+}
+#f{color: #54a6ce;float: left;}
+#m{color: #ee8686;float: left;}
+#first,#second,#third,#fourth{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+}
+#first{
+	top:300px;
+	left: 75px;
+}
+#second{
+	top: 300px;
+	left: 160px;
+}
+#third{
+	top: 300px;
+	left: 250px;
+}
+#fourth{
+	top: 300px;
+	left: 345px;
+}
